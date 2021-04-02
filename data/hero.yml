@@ -1,0 +1,13 @@
+---
+enable: true
+topTitle: Hello there.
+content: >
+  # I build awesome stuff.
+
+  From apps to custom software, I try to make beautiful
+  and amazing stuff that a lot of people will enjoy.
+buttonName: See latest projects
+buttonURL: "#hashtag"
+image: images/hero/2960351.jpg
+videoThumb:
+videoURL:

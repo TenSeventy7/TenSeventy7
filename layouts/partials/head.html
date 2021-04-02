@@ -1,0 +1,101 @@
+<head>
+  {{ $baseurl := .Site.BaseURL }}
+  <meta charset="utf-8" />
+  <title>{{ .Title }} {{ if not .IsHome }}| {{ .Site.Title}}{{ end }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css" integrity="sha256-RdH19s+RN0bEXdaXsajztxnALYs/Z43H/Cdm1U4ar24=" crossorigin="anonymous">
+
+  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/brand/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/brand/favicon/safari-pinned-tab.svg" color="#1b4079">
+  <link rel="shortcut icon" href="/assets/brand/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#1b4079">
+  <meta name="msapplication-config" content="/assets/brand/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#1b4079">
+
+  {{ if .Params.noLink }}
+  <meta http-equiv="refresh" content="0;url={{ .Params.linkUrl }}" />
+  <meta name="robots" content="noindex" />
+  {{ end }}
+
+  {{ if eq .Type "404" }}
+  <meta http-equiv="refresh" content="10;url=/" />
+  <meta name="robots" content="noindex" />
+  {{ end }}
+
+  {{ if .IsPage }}
+  <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
+  {{ end }}
+  {{ with .Params.featureImage }}
+  <meta property="og:image" content="{{ if in . "http" }}{{ . }}{{ else }}{{ $baseurl }}{{ . }}{{ end }}" />
+  {{else}}
+  <meta property="og:image" content="{{ $baseurl }}/assets/images/default.png" />
+  {{ end }}
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}" />
+  <meta property="og:locale" content="{{ if .Params.locale }}{{ .Params.locale }}{{ else }}en_US{{ end }}" />
+  {{ with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
+  {{ with .Params.videos }}{{ range . }}
+  <meta property="og:video" content="{{ . }}" />
+  {{ end }}
+  {{ end }}
+  {{ with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+
+  {{ if eq .Type "blog" }}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z0700" }}"/>
+  <meta property="article:section" content="{{ .Section }}" />
+  {{ else }}
+
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  <meta property="og:image" content="{{ $baseurl }}/assets/images/default.png" />
+  <meta property="og:url" content="{{ $baseurl }}" />
+  <meta property="og:description" content="The official tensevntysevn website." />
+  <meta property="og:locale" content="{{ if .Params.locale }}{{ .Params.locale }}{{ else }}en_US{{ end }}" />
+  {{ end }}
+
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js" integrity="sha256-WzuqEKxV9O7ODH5mbq3dUYcrjOknNnFia8zOyPhurXg=" crossorigin="anonymous"></script>
+
+  {{ $ajax := resources.Get "js/ajax.js" | minify}}
+  <script src="{{ $ajax.Permalink }}"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+  {{ if .IsPage }}
+  <!-- Twitter Card data -->
+  <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}"/>
+  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}"/>
+  <meta name="twitter:domain" content="tensevntysevn.cf"/>
+  <meta name="twitter:url" content="{{ .Permalink }}">
+  {{ with .Params.featureImage }}
+  <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="{{ if in . "http" }}{{ . }}{{ else }}{{ $baseurl }}{{ . }}{{ end }}"/>
+  {{ else }}
+    <meta name="twitter:card" content="summary"/>
+  {{ end }}
+  {{ else }}
+
+  <meta name="twitter:title" content="{{ .Site.Title }}"/>
+  <meta name="twitter:description" content="The official tensevntysevn website."/>
+  <meta name="twitter:domain" content="tensevntysevn.cf"/>
+  <meta name="twitter:url" content="{{ $baseurl }}">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="{{ $baseurl }}/assets/images/default.png"/>
+  {{ end }}
+</head>

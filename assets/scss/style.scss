@@ -1,0 +1,133 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+PROJECT:	Portio HTML
+VERSION:	1.0.0
+-------------------------------------------------------------------*/
+@import "variables";
+
+@import "../bootstrap-4.5.2/scss/bootstrap";
+
+@import "typography";
+
+@import "mixins";
+
+@import "buttons";
+
+@import "common";
+
+@import "components/preloder";
+
+@import "components/navbar";
+
+@import "components/hero-section";
+
+@import "components/about-section";
+
+@import "components/service-section";
+
+@import "components/portfolio-section";
+
+@import "components/resume-section";
+
+@import "components/skill-section";
+
+@import "components/testimonial-section";
+
+@import "components/blog-section";
+
+@import "components/footer-section";
+
+@import "components/blog";
+
+@import "components/single-blog-post";
+
+@import "components/page-title";
+
+@import "components/contact";
+
+@import "components/case_details";
+
+@import "components/magnific_popup";
+
+@import "components/cookie_consent";
+
+.placeholder{
+  z-index: 2;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.image-placeholder {
+  display: block;
+  float:left;
+  width: 100%;
+  height: 25vw;
+}
+
+.placeholder .title-line {
+    animation: wave 1s infinite linear forwards;
+    -webkit-animation:wave 1s infinite linear forwards;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+	margin-bottom: 12px;
+	height: 1.4rem;
+	width: 17vw;
+}
+.placeholder .category-line {
+    animation: wave 1s infinite linear forwards;
+    -webkit-animation:wave 1s infinite linear forwards;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+	width: 100px;
+	height: 20px;
+}
+.category-placeholder {
+	width: 100%;
+}
+.wave {
+    animation: wave 1s infinite linear forwards;
+    -webkit-animation:wave 1s infinite linear forwards;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+}
+
+@keyframes wave{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+@-webkit-keyframes wave{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.notfound-title {
+	font-size: 5rem;
+}

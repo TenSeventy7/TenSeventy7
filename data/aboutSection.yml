@@ -1,0 +1,17 @@
+---
+enable: true
+topTitle: about tensevntysevn
+title: >
+  ## Beyond the Code
+content: >
+  ### I just loved technology.
+
+  I always loved tinkering with different gadgets and software,
+  knowing how they work behind-the-scenes, and generally using them.
+  This led me to doing software development, a passion I have since I was 12.
+
+button1Name: My Latest Projects
+button2Name: See my GitHub
+button1Target: '/#portfolio'
+button2Target: https://github.com/TenSeventy7
+image: /assets/images/about/about-img.jpg

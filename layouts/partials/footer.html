@@ -1,0 +1,141 @@
+<section class="footer" id="contact">
+	<div class="footer__background_shape">
+		<svg viewBox="0 0 1920 79">
+			<path d="M0 0h1920v79L0 0z" data-name="Path 1450" />
+		</svg>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="footer__cta">
+					<div class="shape-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
+							<path data-name="Path 1449"
+								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
+								transform="translate(217.489 188.626)" />
+						</svg>
+					</div>
+					<div class="shape-2">
+						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
+							<path data-name="Path 1449"
+								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
+								transform="translate(217.489 188.626)" />
+						</svg>
+					</div>
+					<div class="text-light footer__cta_content">
+						<span>Contact me</span>
+						<h2 class="mb-0">Something in Mind?</h2>
+					</div>
+					<div class="footer__cta_action">
+						<a class="btn btn-light btn-zoom" href="{{ .Site.Params.contactLink | absURL }}">Get in Touch</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row footer__widget">
+			<div class="col-lg-4">
+				<div class="footer__widget_logo mb-5">
+					<img src="{{ .Site.Params.footerLogo | absURL }}" alt="widget-logo">
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="text-light footer__widget_sitemap mb-5">
+					<h4 class="base-font">Quick Links</h4>
+					<ul class="unstyle-list small">
+						{{ $sitemap := .Site.Menus.sitemap }}
+						{{ range $sitemap }}
+						<li class="mb-2"><a class="text-light" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+						{{ end }}
+						<li class="mb-2"><a class="text-light" href="javascript:;" id="changeCookiePreferences">Change Cookie Preferences</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="text-light footer__widget_address mb-5">
+					<h4 class="base-font">Get in Touch</h4>
+					{{ $address := .Site.Params.address }}
+					<ul class="fa-ul small">
+						<li class="mb-2"><a class="text-light" href="//github.com/{{ $address.github }}"><span class="fa-li"><i
+										class="fa fab fa-github-alt"></i></span>@{{ $address.github }}</a></li>
+						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span class="fa-li"><i
+										class="fa fa-envelope"></i></span>{{ $address.email }}</a></li>
+						<li class="mb-2">
+							<span class="fa-li"><i class="fa fa-map-marker"></i></span>{{ $address.address }}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row footer__footer">
+			<div class="col-lg-6">
+				<div class="footer__footer_copy text-light">
+					<p>{{ .Site.Params.copyright }}.<br>Illustration by <a href="https://storyset.com/work">Freepik Storyset</a></p>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="footer__footer_copy text-light d-md-flex justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end justify-content-xxl-end">
+					  <a class="mr-md-4" href="https://www.netlify.com">
+					    <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
+					  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+  
+{{ with site.Params.googleAnalytics }}
+<script cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script cookie-consent="tracking">
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', '{{ . }}');
+</script>
+{{ end }}
+
+<script cookie-consent="targeting" type="text/plain" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6062c3f05a88f630"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha256-7dA7lq5P94hkBsWdff7qobYkp9ope/L5LQy2t/ljPLo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js" integrity="sha256-No2qtnsaWysoAu27rHmiqkupkqLr+cZ7mK14TYAEAYw=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenMax.min.js"></script>
+<script type="text/javascript" src="/assets/js/imagesloaded.min.js"></script>
+<script type="text/javascript" src="/assets/js/masonry.min.js"></script>
+
+{{ $dql := resources.Get "js/disqusloader.js" | minify }}
+<script type="text/javascript" src="{{ $dql.Permalink }}"></script>
+{{ $formhandler := resources.Get "js/form-handler.js" | minify }}
+<script type="text/javascript" src="{{ $formhandler.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script type="text/javascript" src="{{ $script.Permalink }}"></script>
+
+<script>
+  if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+          .register('/service-worker.js', { scope: '/' })
+          .then(function(registration) {
+              //console.log('Service Worker Registered');
+          });
+
+      navigator.serviceWorker
+          .ready
+          .then(function(registration) {
+              //console.log('Service Worker Ready');
+          });
+  }
+</script>
+
+<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+{{ $consent := resources.Get "js/cookie-consent.js" | minify }}
+<script type="text/javascript" src="{{ $consent.Permalink }}"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","website_name":"the tensevntysevn website","change_preferences_selector":"#changeCookiePreferences","cookies_policy_url":"https://tensevntysevn.cf/privacy#cookies"});
+});
+</script>
+<!-- End Cookie Consent --> 

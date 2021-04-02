@@ -1,0 +1,5 @@
+<div class="blog-section">
+	<figure class="article-image-container" link="{{ .Destination | safeURL }}" href="{{ .Destination | safeURL }}" {{ with .Text }}caption="{{ . }}"{{ end }}>
+		<img class="img-fluid blog-img" src="{{ .Destination | safeURL }}" />
+	</figure>
+</div>

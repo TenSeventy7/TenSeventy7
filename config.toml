@@ -1,0 +1,64 @@
+baseURL = "https://tensevntysevn.cf"
+title = "tensevntysevn"
+languageCode = "en-us"
+paginate = 6
+
+# Main Menu
+[[menu.main]]
+name = "Blog"
+url = "#blog"
+weight = 1
+[[menu.main]]
+name = "About"
+url = "#about"
+weight = 2
+[[menu.main]]
+name = "Projects"
+url = "#projects"
+weight = 3
+[[menu.main]]
+name = "Contact"
+url = "contact"
+weight = 4
+
+# Sitemap Menu
+[[menu.sitemap]]
+name = "Server Status"
+url = "https://status.tensevntysevn.cf/"
+weight = 1
+[[menu.sitemap]]
+name = "Code of Conduct"
+url = "ethics"
+weight = 2
+[[menu.sitemap]]
+name = "Privacy Policy"
+url = "privacy"
+weight = 3
+
+[params]
+blogPageURL = "blog"
+contactLink = "contact"
+copyright = "© John Vincent - 2021"
+footerLogo = "/assets/images/contact/widget-logo.png"
+googleAnalytics = "YOUR GOOGLE ANALYTICS CODE"
+logo = "/assets/images/site-navigation/logo.png"
+
+[params.address]
+address = "Manila, Philippines"
+email = "kamusta@tensevntysevn.cf"
+github = "TenSeventy7"
+telegram = "TenSeventy7"
+
+# Social icons
+[[params.social]]
+icon = "fa-telegram"
+url = "https://www.facebook.com/"
+weight = 1
+[[params.social]]
+icon = "fa-discord"
+url = "https://www.linkedin.com/"
+weight = 2
+[[params.social]]
+icon = "fa-twitter-square"
+url = "https://twitter.com/"
+weight = 3
