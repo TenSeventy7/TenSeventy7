@@ -1,5 +1,5 @@
 const OFFLINE_VERSION = 4.6;
-BASE_CACHE_FILES = ["/assets/brand/favicon/android-chrome-192x192.png", "/scss/style.min.css", "/assets/brand/favicon/favicon-16x16.png", "/assets/brand/favicon/favicon-32x32.png"], CACHE_NAME = "offline_4.8", OFFLINE_URL = "/offline/";
+BASE_CACHE_FILES = ["/assets/brand/favicon/android-chrome-192x192.png", "/scss/style.min.css", "/assets/brand/favicon/favicon-16x16.png", "/assets/brand/favicon/favicon-32x32.png"], CACHE_NAME = "offline_5.0", OFFLINE_URL = "/offline/";
 self.addEventListener("install", e => {
     e.waitUntil((async() => {
         const e = await caches.open(CACHE_NAME);

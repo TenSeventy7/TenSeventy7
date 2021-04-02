@@ -2,6 +2,11 @@
 .cc_dialog {
   position: fixed !important;
   padding: 2rem 8rem !important;
+
+  @include tablet {
+    padding: 1rem 2rem !important;
+  }
+
   box-shadow: 0 4px 7px -2px rgba(0,0,0,0.3) !important;
 }
 
@@ -9,6 +14,10 @@
   font-family: "Poppins", sans-serif !important;
   font-weight: 700 !important;
   margin-bottom: 12px;
+
+  @include tablet {
+    display: none !important;
+  }
 }
 
 .cc_dialog_text {
