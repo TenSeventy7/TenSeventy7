@@ -9,7 +9,7 @@ title = "Fresh 3: Awesomely Fresh"
 +++
 After almost **three months** of development, the freshest Fresh is here. Say hello to Fresh 3, awesomely fresh!
 
-Here is a veeeeeeeerrrry quick rundown of all the new stuff on the One UI 3.1-based Fresh 3.
+Here is a _veeeeeeeerrrry_ quick rundown of all the new stuff on the One UI 3.1-based Fresh 3.
 
 ### Awesome is for Everyone
 
@@ -56,11 +56,13 @@ Fresh Hub will get more features very soon, including **Spectrum support** so st
 
 Fresh 3 makes more improvements to the debloating process. Aside from the removed apps from Fresh 1.3, Fresh 3 now also excludes these apps, now in their separate addons:
 
-* Smart View (now on Seamless)
+* Smart View (now on Samsung Live)
 * Dual Messenger (now on My Galaxy)
 * Bixby Routines (now on Bixby Smart)
 
-My Galaxy has been broken down as well and is now simply a singular addon. Addons for Wi-Fi Direct (AllShare, Wi-Fi Direct sharing, and Quick Share) are now in a separate "Seamless" module, Bixby Reminders and Routines are in a separate "Bixby Smart" addon, 
+My Galaxy has been broken down as well and is now simply a singular addon. Addons for Wi-Fi Direct (AllShare, Wi-Fi Direct sharing, and Quick Share) are now in a separate "Samsung Live" module, Bixby Reminders and Routines are in a separate "Bixby Smart" addon, Your Phone and "Call and text on other devices" are now in "Seamless".
+
+More addons, as well as third-party addons, will be available very soon!
 
 ### A Bigger Community
 
