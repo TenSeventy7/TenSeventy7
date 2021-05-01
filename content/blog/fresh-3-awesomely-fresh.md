@@ -76,11 +76,11 @@ I want to thank everyone in the community for making Fresh what it is today. You
 
 And that's just a quick rundown! You'll absolutely going to love Fresh 3 with its bounty of new features and improvements.
 
+After installing, **Reboot to System!** Magisk 22.1 is now included with the system kernel, **no more need to boot to recovery to get root!**
+
 Fresh 3 is now available from the Fresh official website and official SourceForge repository. Google Drive and MEGA links are available on the Fresh forum.
 
 Addons are available on Fresh Hub, SourceForge, and the official MEGA mirror.
-
-After installing, **Reboot to System!** Magisk 22.1 is now included with the system kernel, **no more need to boot to recovery to get root!**
 
     [1] Provided by Snap Inc. for Samsung
     [2] Compared to Fresh 1
