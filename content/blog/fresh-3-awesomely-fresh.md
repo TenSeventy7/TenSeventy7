@@ -66,6 +66,12 @@ More addons, as well as third-party addons, will be available very soon!
 
 ### A Bigger Community
 
+The Galaxy A50 will not be alone anymore, **Fresh will also come to the Galaxy A50s and M30s later this year**, with more support to come soon.
+
+The community has also gotten larger ever since the first 1.2 release of Fresh just over three months ago. From your bug reports, feature suggestions, and even contributions in making Fresh Hub more accessible to everyone by translating the app, you all have made Fresh better.
+
+I want to thank everyone in the community for making Fresh what it is today. You are the pilots in making Fresh 3 an amazing thing to work on, and a release that exceeded my expectations.You all have helped making Fresh 3 the biggest release I have ever done in my development life. **Thank you.**
+
 ### Get Fresh 3 Today!
 
 And that's just a quick rundown! You'll absolutely going to love Fresh 3 with its bounty of new features and improvements.
