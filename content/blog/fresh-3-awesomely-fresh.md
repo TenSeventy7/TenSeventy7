@@ -29,7 +29,7 @@ You deserve it, **your phone deserves it.**
 
 ### Powerful Squeeze
 
-Fresh is faster and more powerful thanks to **Fresh Core,** a new in-house kernel designed to power your device through your day. Fresh Core is balanced for performance and battery life, and allows you to do the things you love for much, much longer, without giving up great performance.
+Fresh is faster and more powerful thanks to **Fresh Core,** a new, in-house kernel designed to power your device through your day. Fresh Core is balanced for performance and battery life, and allows you to do the things you love for much, much longer, without giving up great performance.
 
 Optimized for One UI 3, Fresh Core includes features anyone who wants to tinker their device to squeeeeeeze more performance into their device will be glad to have; including:
 
