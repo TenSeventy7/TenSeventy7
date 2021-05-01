@@ -17,3 +17,5 @@ fields:
 - type: number
   name: readtime
   label: Reading Time
+pages:
+- content/blog/fresh-3-awesomely-fresh.md
