@@ -5,13 +5,18 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/404
-  label: '404'
+  path: content/blog
+  label: Blog
   create: all
   match: "**/*"
 - type: directory
-  path: content/blog
-  label: Blog
+  path: content/project
+  label: Project
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/404
+  label: '404'
   create: all
   match: "**/*"
 - type: directory
@@ -32,11 +37,6 @@ sections:
 - type: directory
   path: content/privacy
   label: Privacy
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/project
-  label: Project
   create: all
   match: "**/*"
 - type: directory
