@@ -2,18 +2,18 @@
 label: Blog Post
 hide_body: false
 fields:
-- type: datetime
-  name: date
-  label: date
-- type: textarea
-  name: description
-  label: description
-- type: file
-  name: featureImage
-  label: featureImage
-- type: number
-  name: readtime
-  label: readtime
 - type: text
   name: title
-  label: title
+  label: Title
+- type: textarea
+  name: description
+  label: Short Description
+- type: datetime
+  name: date
+  label: Publish Date
+- type: file
+  name: featureImage
+  label: Featured Image
+- type: number
+  name: readtime
+  label: Reading Time
