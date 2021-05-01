@@ -46,7 +46,7 @@ Fresh 3 is not just _fresher_, it's **faster** and **more powerful**\[2\].
 
 ### Easier to Freshen Up
 
-Fresh 3 is not just about being _fresher, _it's about keeping it fresh much easier than before. Developed in collaboration with Yanndroid, **Fresh Hub is here to make updating your device as easy as stock and access the community much easier!**
+Fresh 3 is not just about being _fresher_, it's about keeping it fresh much easier than before. Developed in collaboration with Yanndroid, **Fresh Hub is here to make updating your device as easy as stock and access the community much easier!**
 
 With a user experience very similar to stock, Fresh Hub is familiar, and friendly to use one handed. Updating is also a cinch, just check, update, and go! Accessing addons is now easier than ever as well! **Addons are now available for download, install, and even uninstall from within Fresh Hub**\[3\]**.** **Fresh Hub is also update-able separately from the ROM!**
 
