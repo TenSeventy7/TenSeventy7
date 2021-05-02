@@ -1,7 +1,6 @@
 +++
 date = 2021-05-02T16:00:00Z
 description = "Fresh 3 is here, and it's more fun than ever!"
-draft = true
 featureImage = "/uploads/fresh_3_cover.jpg"
 readtime = 10
 title = "Fresh 3: Awesomely Fresh"
