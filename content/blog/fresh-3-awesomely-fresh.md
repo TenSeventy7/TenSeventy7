@@ -2,7 +2,7 @@
 date = 2021-05-02T16:00:00Z
 description = "Fresh 3 is here, and it's more fun than ever!"
 draft = true
-featureImage = ""
+featureImage = "/uploads/fresh_3_cover.jpg"
 readtime = 10
 title = "Fresh 3: Awesomely Fresh"
 
@@ -15,6 +15,8 @@ Here is a _veeeeeeeerrrry_ quick rundown of all the new stuff on the One UI 3.1-
 
 Just because the Galaxy A50 is **two years old** doesn't mean that you don't deserve all the new features. Aside from the features you have loved from Fresh 1, **Fresh 3 includes more features from the latest Galaxy devices!**
 
+![](/uploads/screenshot_20210501-110248_camera.jpg) ![](/uploads/screenshot_20210501-110259_camera.jpg) ![](/uploads/screenshot_20210501-110314_camera.jpg)
+
 Fresh includes **Fun Mode** from the **Galaxy A52,** which allows you to take more fun selfies with filters updated every once in a while\[1\]. Fresh 3 also includes more camera features, including **Hyperlapse on the front camera**, and **recording in 1080p120 and 1080p24 in Pro Video Mode;** courtesy of Ahmed from the Fresh Community (thanks man!). Fresh 3 also includes ArcSoft's **High Resolution** and **Image Enhancement** improvements from the Galaxy S21 and the A52.
 
 Fresh 3 will now also allow you to experience the **Alt Z Life**, wherever you are. **Alt Z Life is enabled for all regions**, with **Content Suggestions** so you can keep the most secret stuff separately, and access it by a simple double-click of the power button. Fresh 3 also includes **Useful Cards** on the messaging app. Never miss what's most important, it does all the hard work for you in the background and presents you with useful information at the right time. **It also runs on-device**, so there is no need for an internet connection.
@@ -22,6 +24,8 @@ Fresh 3 will now also allow you to experience the **Alt Z Life**, wherever you a
 Fresh 3 also comes with a very easy-to-use **resolution changer** very similar to what you see on flagships. Easily switch between 1080p all the way to 540p with just a few taps!
 
 Won from the Fresh Community poll, Fresh 3 includes **the colorful and fun wallpapers from the Galaxy S20 Fan Edition**, including the video wallpapers! Fresh 3 also includes **all the flagship video backgrounds for the call screen** as well as **all the ringtone themes from the latest Galaxy devices.**
+
+![](/uploads/screenshot_20210501-110401_fresh-hub.jpg) ![](/uploads/screenshot_20210501-110016_settings.jpg) ![](/uploads/screenshot_20210501-165154_one-ui-home.jpg)
 
 To top it all off, **Fresh 3 includes the latest boot logo from the latest Galaxy S and A devices of this year.** So your device feels _Fresher_ and newer than what it is.
 
@@ -48,7 +52,9 @@ Fresh 3 is not just _fresher_, it's **faster** and **more powerful**\[2\].
 
 Fresh 3 is not just about being _fresher_, it's about keeping it fresh much easier than before. Developed in collaboration with Yanndroid, **Fresh Hub is here to make updating your device as easy as stock and access the community much easier!**
 
-With a user experience very similar to stock, Fresh Hub is familiar, and friendly to use one handed. Updating is also a cinch, just check, update, and go! Accessing addons is now easier than ever as well! **Addons are now available for download, install, and even uninstall from within Fresh Hub**\[3\]**.** **Fresh Hub is also update-able separately from the ROM!**
+![](/uploads/screenshot_20210501-110042_fresh-hub.jpg) ![](/uploads/screenshot_20210501-110138_fresh-hub.jpg) ![](/uploads/screenshot_20210501-110143_fresh-hub.jpg)
+
+With a user experience very similar to One UI, Fresh Hub is familiar, and friendly to use one handed. Updating is also a cinch, just check, update, and go! Accessing addons is now easier than ever as well! **Addons are now available for download, install, and even uninstall from within Fresh Hub**\[3\]**.** **Fresh Hub is also update-able separately from the ROM!**
 
 Fresh Hub will get more features very soon, including **Spectrum support** so stay tuned!
 
@@ -78,9 +84,9 @@ And that's just a quick rundown! You'll absolutely going to love Fresh 3 with it
 
 After installing, **Reboot to System!** Magisk 22.1 is now included with the system kernel, **no more need to boot to recovery to get root!**
 
-Fresh 3 is now available from the Fresh official website and official SourceForge repository. Google Drive and MEGA links are available on the Fresh forum.
+Fresh 3 is now available from the [Fresh official website](https://fresh.tensevntysevn.cf/) and [official SourceForge repository](https://sourceforge.net/projects/freshroms/files/). Google Drive and MEGA links are available on the Fresh forum.
 
-Addons are available on Fresh Hub, SourceForge, and the official MEGA mirror.
+Addons are available on Fresh Hub, [SourceForge](https://sourceforge.net/projects/freshroms/files/Addons/12.0.2.0/), and the [official MEGA mirror](https://mega.nz/folder/hyY3xaaA#4z76GQRXNXPGwZZ1EozYeA).
 
     [1] Provided by Snap Inc. for Samsung
     [2] Compared to Fresh 1
