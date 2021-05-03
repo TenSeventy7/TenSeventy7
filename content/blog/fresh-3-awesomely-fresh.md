@@ -1,5 +1,5 @@
 +++
-date = 2021-05-02T16:00:00Z
+date = 2021-05-03T02:50:00Z
 description = "Fresh 3 is here, and it's more fun than ever!"
 featureImage = "/uploads/fresh_3_cover.jpg"
 readtime = 10
