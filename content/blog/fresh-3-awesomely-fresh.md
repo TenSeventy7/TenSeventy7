@@ -1,6 +1,6 @@
 +++
 date = 2021-05-03T02:50:00Z
-description = "Fresh 3 is here, and it's more fun than ever!"
+description = "Fresh 3 is here, and it's more fun than ever! #AwesomelyFresh."
 featureImage = "/uploads/fresh_3_cover.jpg"
 readtime = 10
 title = "Fresh 3: Awesomely Fresh"
