@@ -32,7 +32,7 @@
   <meta name="robots" content="noindex" />
   {{ end }}
 
-  {{ if eq .Type "404" }}
+  {{ if eq .Params.header "404" }}
   <meta http-equiv="refresh" content="10;url=/" />
   <meta name="robots" content="noindex" />
   {{ end }}
