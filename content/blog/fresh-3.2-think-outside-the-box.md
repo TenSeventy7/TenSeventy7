@@ -74,7 +74,9 @@ To that I say, **thank you.** I just recently celebrated my birthday, and to be 
 
 ### Download Fresh 3.2
 
-Fresh 3.2 will be available as an **over-the-air (OTA) update** for existing Fresh 3.1 users on **July 29, 2021**, with full rollouts on the XDA Forum and the Fresh website on **July 30, 2021 at 7:30 AM.**
+**Fresh 3.2 is now available as an over-the-air update for current 3.1.3 users.** If you haven't updated to 3.1.3 yet, update to it first so you can receive 3.2.2.
+
+Fresh 3.2 will be fully available for everyone on the XDA Forum and the Fresh website on **July 30, 2021 at 7:30 AM.**
 
 Addons are available on Fresh Hub as well as on the Fresh website.
 
