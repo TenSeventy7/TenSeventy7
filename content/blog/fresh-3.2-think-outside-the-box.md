@@ -16,8 +16,6 @@ Fresh 3.1 brought apps and features from flagship and the latest Samsung devices
 
 Fresh 3.2 is the very first Fresh release to be based upon a flagship Samsung Galaxy device, namely the **Galaxy S20 Fan Edition**; hence these new releases coined "Fresh Edition" builds. This brings the stuff that you've only dreamt before with your Galaxy A device, including **Samsung DeX\[1\]** and **live blur\[1\]** functionality.
 
- 
-
 This base change also brings more rich camera and media experiences. Say goodbye to bland Single Take shots as **full ST 2.0** support is here with collage, portrait, and even full support for video highlights! **Motion Photos** is here as well, take shots even before you press the shutter button. **My Filter** has been improved as well with better filter generation. Plus, reminisce memories in better and clearer quality with **Photo Remastering** options on the Gallery!
 
 ### A Bigger Hub
@@ -76,7 +74,7 @@ To that I say, **thank you.** I just recently celebrated my birthday, and to be 
 
 ### Download Fresh 3.2
 
-Fresh 3.2 will be available as an **over-the-air (OTA) update** for existing Fresh 3.1 users on **July 30, 2021**, with full rollouts on the XDA Forum and the Fresh website on **July 31, 2021 at 7:30 AM.**
+Fresh 3.2 will be available as an **over-the-air (OTA) update** for existing Fresh 3.1 users on **July 29, 2021**, with full rollouts on the XDA Forum and the Fresh website on **July 30, 2021 at 7:30 AM.**
 
 Addons are available on Fresh Hub as well as on the Fresh website.
 
