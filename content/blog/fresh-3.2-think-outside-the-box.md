@@ -14,7 +14,7 @@ Fresh 3.1 brought apps and features from flagship and the latest Samsung devices
 
 ![](/uploads/screenshot_20210728-145527_samsung-dex.jpg)![](/uploads/screenshot_20210728-145444_gallery.jpg)
 
-Fresh 3.2 is the very first Fresh release to be based upon a flagship Samsung Galaxy device, namely the **Galaxy S20 Fan Edition**; hence these new releases coined "Fresh Edition" builds. This brings the stuff that you've only dreamt before with your Galaxy A device, including __Samsung DeX*__ and __live blur*__ functionality.
+Fresh 3.2 is the very first Fresh release to be based upon a flagship Samsung Galaxy device, namely the **Galaxy S20 Fan Edition**; hence these new releases coined "Fresh Edition" builds. This brings the stuff that you've only dreamt before with your Galaxy A device, including **Samsung DeX\[1\]** and **live blur\[1\]** functionality.
 
  
 
@@ -80,7 +80,7 @@ Fresh 3.2 will be available as an **over-the-air (OTA) update** for existing Fre
 
 Addons are available on Fresh Hub as well as on the Fresh website.
 
-_* Installed separately as addons_
+_\[1\] Installed separately as addons_
 
 #### Important Developer Information
 
