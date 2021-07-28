@@ -35,3 +35,5 @@ fields:
 - type: text
   name: solution
   label: solution
+pages:
+- content/project/fresh.md
