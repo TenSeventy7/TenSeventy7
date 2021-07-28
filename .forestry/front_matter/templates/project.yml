@@ -1,0 +1,37 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: featureImage
+  label: featureImage
+- type: text
+  name: service
+  label: service
+- type: boolean
+  name: noLink
+  label: noLink
+- type: text
+  name: linkUrl
+  label: linkUrl
+- type: text
+  name: client
+  label: client
+- type: text
+  name: language
+  label: language
+- type: text
+  name: shortDescription
+  label: shortDescription
+- type: text
+  name: challenge
+  label: challenge
+- type: text
+  name: solution
+  label: solution
