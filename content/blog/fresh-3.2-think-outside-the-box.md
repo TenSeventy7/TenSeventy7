@@ -88,12 +88,12 @@ Fresh 3.2 will now enable users to use Samsung DeX (wireless, on PC), Samsung's 
 
 If you are a **kernel developer**, it is advised to merge the following patches for touchpad functionality to work:
 
-[https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/266162ef9d23240d6840a4abc9a8192751b52306](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/266162ef9d23240d6840a4abc9a8192751b52306 "https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/266162ef9d23240d6840a4abc9a8192751b52306")
+[Patch 1](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/266162ef9d23240d6840a4abc9a8192751b52306)
 
-[https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/658437573b6ebc9201c4095d4977a0dc29f6ae85](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/658437573b6ebc9201c4095d4977a0dc29f6ae85 "https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/658437573b6ebc9201c4095d4977a0dc29f6ae85")
+[Patch 2](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/658437573b6ebc9201c4095d4977a0dc29f6ae85)
 
-[https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/a3a846986161defa7afc866f56f598c3ddf75edd](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/a3a846986161defa7afc866f56f598c3ddf75edd "https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/a3a846986161defa7afc866f56f598c3ddf75edd")
+[Patch 3](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/a3a846986161defa7afc866f56f598c3ddf75edd)
 
-[https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/45c76ba577a297827980b8990d0e3ad3b827745e](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/45c76ba577a297827980b8990d0e3ad3b827745e "https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/45c76ba577a297827980b8990d0e3ad3b827745e")
+[Patch 4](https://github.com/TenSeventy7/android_kernel_samsung_exynos9610_fresh/commit/45c76ba577a297827980b8990d0e3ad3b827745e)
 
 Patches are adapted from the Galaxy Z Fold kernel, which includes display drivers (albeit newer, and with DeX support) also used on the A50. Thank you.
