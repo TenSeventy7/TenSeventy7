@@ -12,23 +12,23 @@ This might be the _freshest_ release to date, and it's breaking the boundaries o
 
 Fresh 3.1 brought apps and features from flagship and the latest Samsung devices, this time I'm bringing the whole package **wholesale.**
 
-![](/uploads/screenshot_20210728-145527_samsung-dex.jpg)
+![](/uploads/screenshot_20210728-145527_samsung-dex.jpg)![](/uploads/screenshot_20210728-145444_gallery.jpg)
 
 Fresh 3.2 is the very first Fresh release to be based upon a flagship Samsung Galaxy device, namely the **Galaxy S20 Fan Edition**; hence these new releases coined "Fresh Edition" builds. This brings the stuff that you've only dreamt before with your Galaxy A device, including __Samsung DeX*__ and __live blur*__ functionality.
 
-![](/uploads/screenshot_20210728-145444_gallery.jpg) ![](/uploads/screenshot_20210728-145827_camera.jpg)
+ 
 
 This base change also brings more rich camera and media experiences. Say goodbye to bland Single Take shots as **full ST 2.0** support is here with collage, portrait, and even full support for video highlights! **Motion Photos** is here as well, take shots even before you press the shutter button. **My Filter** has been improved as well with better filter generation. Plus, reminisce memories in better and clearer quality with **Photo Remastering** options on the Gallery!
 
 ### A Bigger Hub
+
+![](/uploads/screenshot_20210728-145510_fresh-hub.jpg)
 
 Fresh Hub was introduced with Fresh 3 as a way to make updating your device easier. Starting Fresh 3.2, the Hub is getting more features to make your phone yours.
 
 Fresh 3.2 brings **Zest**, your one-stop shop for all Fresh-specific options, tweaks, and more! Make your phone yours with **Color-matching Themes**; and yes, it's inspired by Android 12's Monet (and is released before Android 12 xD). Match your device theme with your current home or lock screen wallpaper and make your phone truly yours.
 
 This release also brings **icon customization options** for the Wi-Fi and data connection icons, with more comprehensive options coming very soon.
-
-![](/uploads/screenshot_20210728-145510_fresh-hub.jpg)
 
 ### Dual Messenger Missing
 
@@ -48,11 +48,11 @@ This release also brings **full support for Android Pony EXpress (APEX)** module
 
 ### A Bigger Family
 
+![](/uploads/fresh-server-icons-community.png)
+
 Fresh 3.2 will be the first release to support **U.S. variants** of the Samsung Galaxy A50, to be released very soon. Plus, support for the **Samsung Galaxy A50s** is coming Q3-Q4 2021, with beta registrations to start soon. Stay tuned!
 
 Not only Fresh family of devices is getting larger, the community Fresh has brought has become larger since the ROM's first release last December. All of you have made this possible, from beta testing to feature requests.  Not only Fresh has broke the boundaries of what your device can do, the community has broke the boundaries of what is possible with Fresh.
-
-![](/uploads/fresh-server-icons-community.png)
 
 To that I say, **thank you.** I just recently celebrated my birthday, and to be honest this is the best gift I have ever received. :>
 
