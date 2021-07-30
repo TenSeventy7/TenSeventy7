@@ -74,9 +74,7 @@ To that I say, **thank you.** I just recently celebrated my birthday, and to be 
 
 ### Download Fresh 3.2
 
-**Fresh 3.2 is now available as an over-the-air update for current 3.1.3 users.** If you haven't updated to 3.1.3 yet, update to it first so you can receive 3.2.2.
-
-Fresh 3.2 will be fully available for everyone on the XDA Forum and the Fresh website on **July 30, 2021 at 7:30 AM.**
+**Fresh 3.2 is now available for everyone** on the [XDA Forum](https://forum.xda-developers.com/t/rom-oneui-3-1-a50-fresh-no-frills-samsung-experience-updated-7-30-2021.4208729/) and the [Fresh website](http://fresh.tensevntysevn.cf).
 
 Addons are available on Fresh Hub as well as on the Fresh website.
 
