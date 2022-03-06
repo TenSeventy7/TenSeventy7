@@ -3,7 +3,7 @@ date = 2021-09-17T16:00:00Z
 description = "\"Virtual RAM\" in Android devices are all the rage today. What users don't know is that this, is the most misrepresented feature OEMs have ever cooked up ever since AT&T's 5Ge disaster two years ago."
 draft = true
 featureImage = ""
-readtime = nil
+readtime = 10
 title = "The Truth Behind Virtual RAM (It's not what you think it is)"
 
 +++
