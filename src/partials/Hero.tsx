@@ -1,7 +1,7 @@
 import { GradientText, HeroAvatar } from 'astro-boilerplate-components';
 
 const Hero = () => (
-  <div className="mx-auto max-w-screen-lg px-3">
+  <div className="mx-auto max-w-screen-lg px-3 pt-4 text-center lg:pt-0 lg:text-left">
     <HeroAvatar
       title={
         <>
