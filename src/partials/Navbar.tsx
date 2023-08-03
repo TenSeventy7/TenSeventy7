@@ -1,43 +1,38 @@
-import {
-  Logo,
-  NavbarTwoColumns,
-  NavMenu,
-  Section,
-} from 'astro-boilerplate-components';
 import { GitHub, Gitlab, Layout } from 'react-feather';
 
 const Navbar = () => (
   <div className="bg-cyan-900">
-    <Section>
-      <NavbarTwoColumns>
-        <a href="/">
-          <Logo
-            icon={
-              <img
-                className="h-12"
-                src="/assets/images/logo.png"
-                alt="Logo image"
-              />
-            }
-            name={''}
+    <nav className="px-2 py-4 lg:px-28 lg:py-4">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+        <a href="/" className="flex items-center">
+          <img
+            src="/assets/images/logo.png"
+            className="mr-3 h-10 lg:h-12"
+            alt="Logo"
           />
         </a>
-
-        <NavMenu>
-          <a href="//blog.tenseventyseven.cf">
+        <div>
+          <a
+            href="/"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+          >
             <Layout />
           </a>
-          <div></div>
-          <a href="//github.com/TenSeventy7">
+          <a
+            href="/"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+          >
             <GitHub />
           </a>
-          <div></div>
-          <a href="//gitlab.com/TenSeventy7">
+          <a
+            href="/"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+          >
             <Gitlab />
           </a>
-        </NavMenu>
-      </NavbarTwoColumns>
-    </Section>
+        </div>
+      </div>
+    </nav>
   </div>
 );
 
