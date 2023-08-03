@@ -1,11 +1,17 @@
 /* eslint-disable import/no-extraneous-dependencies, global-require */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
     './node_modules/astro-boilerplate-components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['InterVariable', 'Inter', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
