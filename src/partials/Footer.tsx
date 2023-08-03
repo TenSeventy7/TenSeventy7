@@ -15,17 +15,26 @@ const Footer = () => (
         </span>
         <ul className="mt-3 flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
+            <a
+              href="//blog.tenseventyseven.cf"
+              className="mr-4 hover:underline md:mr-6 "
+            >
               Blog
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a
+              href="//github.com/TenSeventy7"
+              className="mr-4 hover:underline md:mr-6"
+            >
               GitHub
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a
+              href="//gitlab.com/TenSeventy7"
+              className="mr-4 hover:underline md:mr-6"
+            >
               GitLab
             </a>
           </li>
