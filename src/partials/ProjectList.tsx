@@ -16,51 +16,44 @@ const ProjectList = () => (
   >
     <div className="flex flex-col gap-6">
       <Project
-        name="Project 1"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        bibendum. Nunc non posuere consectetur, justo erat semper enim, non
-        hendrerit dui odio id enim."
-        link="/"
+        name="Spanish Gem"
+        description="A UI/UX-oriented scheduler optimization kit for the Xiaomi Redmi Note 12."
+        link="https://github.com/FreshROMs/tnsvn-tapaz-plus/"
         img={{
-          src: '/assets/images/project-web-design.png',
+          src: '/assets/images/projects/spanish_gem.png',
           alt: 'Project Web Design',
         }}
         category={
           <>
-            <Tags color={ColorTags.FUCHSIA}>Astro.js</Tags>
-            <Tags color={ColorTags.LIME}>Web design</Tags>
-            <Tags color={ColorTags.SKY}>Tailwind.css</Tags>
-            <Tags color={ColorTags.ROSE}>TypeScript</Tags>
+            <Tags color={ColorTags.LIME}>Android</Tags>
+            <Tags color={ColorTags.GREEN}>Magisk</Tags>
+            <Tags color={ColorTags.AMBER}>KernelSU</Tags>
+            <Tags color={ColorTags.ORANGE}>Xiaomi</Tags>
           </>
         }
       />
       <Project
-        name="Project 2"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        bibendum. Nunc non posuere consectetur, justo erat semper enim, non
-        hendrerit dui odio id enim."
-        link="/"
-        img={{ src: '/assets/images/project-fire.png', alt: 'Project Fire' }}
+        name="Mint for the Galaxy A50"
+        description="A balanced, optimized kernel for Samsung Galaxy devices on the Exynos 9610 platform."
+        link="https://github.com/FreshROMs/android_kernel_samsung_exynos9610_mint/"
+        img={{ src: '/assets/images/projects/mint.png', alt: 'Project Maps' }}
         category={
           <>
-            <Tags color={ColorTags.VIOLET}>Next.js</Tags>
-            <Tags color={ColorTags.EMERALD}>Blog</Tags>
-            <Tags color={ColorTags.YELLOW}>JavaScript</Tags>
+            <Tags color={ColorTags.LIME}>Android</Tags>
+            <Tags color={ColorTags.ROSE}>Kernel</Tags>
+            <Tags color={ColorTags.INDIGO}>Samsung</Tags>
           </>
         }
       />
       <Project
-        name="Project 3"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        bibendum. Nunc non posuere consectetur, justo erat semper enim, non
-        hendrerit dui odio id enim."
-        link="/"
-        img={{ src: '/assets/images/project-maps.png', alt: 'Project Maps' }}
+        name="Fresh"
+        description="A One UI-based custom ROM for Samsung devices that brings additional features to Galaxy A devices."
+        link="https://fresh.tenseventyseven.cf/"
+        img={{ src: '/assets/images/projects/fresh.png', alt: 'Project Fire' }}
         category={
           <>
-            <Tags color={ColorTags.FUCHSIA}>Astro.js</Tags>
-            <Tags color={ColorTags.INDIGO}>Bootstrap</Tags>
-            <Tags color={ColorTags.ROSE}>TypeScript</Tags>
+            <Tags color={ColorTags.LIME}>Android</Tags>
+            <Tags color={ColorTags.INDIGO}>Samsung</Tags>
           </>
         }
       />

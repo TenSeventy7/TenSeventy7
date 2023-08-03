@@ -50,8 +50,10 @@
   "dependencies": {
     "astro-boilerplate-components": "^1.0.8",
     "date-fns": "^2.28.0",
+    "feather-icons": "^4.29.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10"
   },
   "volta": {
     "node": "16.15.1"

@@ -1,4 +1,5 @@
 ---
+import { Hero } from '@/partials/Hero';
 import { Footer } from '@/partials/Footer';
 import { Navbar } from '@/partials/Navbar';
 import { AppConfig } from '@/utils/AppConfig';
@@ -25,9 +26,14 @@ const {
 
     <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    
+    <meta name="darkreader-lock">
   </head>
   <body class='bg-slate-900 text-gray-100'>
     <Navbar />
+    <div class="bg-cyan-900">
+      <Hero />
+    </div>
 
     <slot></slot>
 
