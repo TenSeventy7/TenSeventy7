@@ -5,6 +5,7 @@ import { Navbar } from '@/partials/Navbar';
 import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
+  isHome: boolean;
   head: {
     title: string;
     description: string;
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 const {
+  isHome,
   head: { title, description },
 } = Astro.props as Props;
 ---
@@ -32,9 +34,13 @@ const {
   </head>
   <body class='bg-slate-900 text-gray-100'>
     <Navbar />
-    <div class="bg-cyan-900">
-      <Hero />
-    </div>
+    {isHome ? 
+      <div class="bg-cyan-900">
+        <Hero />
+      </div>
+      :
+      <div></div>
+    }
 
     <slot></slot>
 

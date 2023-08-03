@@ -1,0 +1,45 @@
+---
+import { ProjectList } from '@/partials/ProjectList';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+const headers = [
+  'Someone took the Chaos Emeralds!',
+  'The princess is in another castle!',
+  'Navi can\'t locate the page!',
+  'The Sheikah Slate can\'t find this page',
+  'Looks like Tails took a wrong turn!',
+  'Whizzed too fast, hit a dead end.',
+  'Looks like you\'ve activated a Trap Card!',
+  'Page banished to the Shadow Realm!',
+  'Time to reshuffle the deck!',
+  'Looks like Team Rocket stole this page!',
+  'Snorlax is blocking this page, and it\'s fast asleep!',  
+  'Jigglypuff sang a lullaby, and this page fell asleep. ',  
+  'Yugi\'s Millennium Puzzle couldn\'t solve this missing page.',  
+  'Sorry, this page is trapped in the Twilight Realm.',  
+  'Seems like Ganon took this page.',  
+  'Looks like Tingle\'s map led you to nowhere.',  
+  'Sonic\'s on it, but this page is in another zone!',  
+  'Looks Like a Maverick Erased This Page!',  
+  'You\'ve reached an unexplored area of the Net.',  
+  'Looks like you wandered off the Cybergrid.',  
+  'Zoanoroids have deleted this page!',  
+  'Knuckles can\'t punch through this missing page!'
+];
+---
+
+<Base head={{ title, description }}>
+  <section class="bg-cyan-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen text-center">
+              <h1 class="mb-4 text-7xl tracking-tight font-bold lg:text-9xl text-cyan-600">404</h1>
+              <p class="mb-4 text-3xl tracking-tight font-bold text-white md:text-4xl">{headers[Math.floor(Math.random() * headers.length)]}</p>
+              <p class="mb-4 text-lg text-white text-opacity-80">Oops, looks like we took a wrong turn. Let's get back on track!</p>
+              <a href="/" class="inline-flex text-white bg-cyan-700 hover:bg-cyan-600 focus:ring-2 focus:ring-cyan-800 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4">Back to Homepage</a>
+          </div>   
+      </div>
+  </section>
+</Base>
