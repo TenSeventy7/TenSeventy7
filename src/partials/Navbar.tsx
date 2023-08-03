@@ -14,19 +14,19 @@ const Navbar = () => (
         <div>
           <a
             href="/"
-            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 md:mx-2"
           >
             <Layout />
           </a>
           <a
             href="/"
-            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 md:mx-2"
           >
             <GitHub />
           </a>
           <a
             href="/"
-            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 lg:mx-2"
+            className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 md:mx-2"
           >
             <Gitlab />
           </a>
