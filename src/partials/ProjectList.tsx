@@ -18,7 +18,7 @@ const ProjectList = () => (
       <Project
         name="Spanish Gem"
         description="A UI/UX-oriented scheduler optimization kit for the Xiaomi Redmi Note 12."
-        link="https://github.com/FreshROMs/tnsvn-tapaz-plus/"
+        link="https://github.com/TenSeventy7/tnsvn-tapaz-plus/"
         img={{
           src: '/assets/images/projects/spanish_gem.png',
           alt: 'Project Web Design',
