@@ -14,7 +14,8 @@ const Hero = () => (
           I'm a <span className="text-cyan-400">junior developer</span>{' '}
           currently studying at the{' '}
           <span className="text-cyan-400">University of the Philippines</span>{' '}
-          and currently developing software for mobile devices.
+          and developing software for{' '}
+          <span className="text-cyan-400">mobile devices</span>.
         </>
       }
       avatar={
