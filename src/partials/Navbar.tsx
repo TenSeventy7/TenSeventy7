@@ -13,7 +13,7 @@ const Navbar = () => (
         </a>
         <div>
           <a
-            href="//blog.tenseventyseven.cf"
+            href="//blog.tenseventyseven.xyz"
             className="mx-0 inline-flex h-10 w-10 items-center justify-center rounded-full text-white opacity-80 transition-colors duration-150 hover:bg-cyan-700 md:mx-2"
           >
             <Layout />
