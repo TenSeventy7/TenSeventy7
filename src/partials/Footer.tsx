@@ -24,7 +24,7 @@ const Footer = () => (
           </li>
           <li>
             <a
-              href="//status.tenseventyseven.cf"
+              href="//status.tenseventyseven.xyz"
               className="mr-4 hover:underline md:mr-6 "
             >
               Server Status
