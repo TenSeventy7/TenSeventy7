@@ -11,11 +11,13 @@ const Hero = () => (
       socialButtons
       description={
         <>
-          I'm a <span className="text-cyan-400">junior developer</span>{' '}
-          currently studying at the{' '}
-          <span className="text-cyan-400">University of the Philippines</span>{' '}
-          and developing software for{' '}
-          <span className="text-cyan-400">mobile devices</span>.
+          I'm a full-time{' '}
+          <span className="text-cyan-400">Computer Science</span> student at the{' '}
+          <span className="text-cyan-400">
+            University of the Philippines - Los Baños
+          </span>
+          {'. '}I develop software for{' '}
+          <span className="text-cyan-400">mobile devices</span> on my free time.
         </>
       }
       avatar={
