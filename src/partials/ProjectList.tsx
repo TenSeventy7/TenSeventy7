@@ -21,7 +21,7 @@ const ProjectList = () => (
         link="https://github.com/TenSeventy7/tnsvn-tapaz-plus/"
         img={{
           src: '/assets/images/projects/spanish_gem.png',
-          alt: 'Project Web Design',
+          alt: 'Spanish Gem',
         }}
         category={
           <>
@@ -36,7 +36,7 @@ const ProjectList = () => (
         name="Mint for the Galaxy A50"
         description="A balanced, optimized kernel for Samsung Galaxy devices on the Exynos 9610 platform."
         link="https://github.com/FreshROMs/android_kernel_samsung_exynos9610_mint/"
-        img={{ src: '/assets/images/projects/mint.png', alt: 'Project Maps' }}
+        img={{ src: '/assets/images/projects/mint.png', alt: 'Mint Kernel' }}
         category={
           <>
             <Tags color={ColorTags.LIME}>Android</Tags>
@@ -48,8 +48,8 @@ const ProjectList = () => (
       <Project
         name="Fresh"
         description="A One UI-based custom ROM for Samsung devices that brings additional features to Galaxy A devices."
-        link="https://fresh.tenseventyseven.cf/"
-        img={{ src: '/assets/images/projects/fresh.png', alt: 'Project Fire' }}
+        link="https://fresh.tenseventyseven.xyz/"
+        img={{ src: '/assets/images/projects/fresh.png', alt: 'Fresh' }}
         category={
           <>
             <Tags color={ColorTags.LIME}>Android</Tags>
