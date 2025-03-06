@@ -3,7 +3,7 @@ import IconBrandGitLab from '~icons/tabler/brand-gitlab';
 import IconMountain from '~icons/tabler/mountain';
 
 export const config = {
-    baseUrl: "https://tenseventyseven.xyz/",
+    baseUrl: "https://tenseventyseven.xyz",
     siteName: "tenseventyseven",
     description: "The official website of tenseventyseven, John Vincent Corcega.",
 
