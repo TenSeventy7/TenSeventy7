@@ -30,6 +30,10 @@ const pageDescription = description || config.description;
 		<title>{pageTitle}</title>
 		<meta name="description" content={pageDescription} />
 
+		<!-- Disable Dark Reader -->
+		<meta name="darkreader-lock">
+		<meta name="color-scheme" content="light dark">
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content={config.siteName} />
