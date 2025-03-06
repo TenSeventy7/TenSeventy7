@@ -38,7 +38,7 @@ const pageDescription = description || config.description;
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content={config.siteName} />
-		<meta property="og:url" content={config.baseUrl} />
+		<meta property="og:url" content={new URL(Astro.url.pathname, config.baseUrl).href} />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={pageDescription} />
 		<meta property="og:image" content={`${config.baseUrl}/assets/og/image.png`} />
@@ -46,7 +46,7 @@ const pageDescription = description || config.description;
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={config.baseUrl} />
+		<meta property="twitter:url" content={new URL(Astro.url.pathname, config.baseUrl).href} />
 		<meta property="twitter:title" content={pageTitle} />
 		<meta property="twitter:description" content={pageDescription} />
 		<meta property="twitter:image" content={`${config.baseUrl}/assets/og/image.png`} />
