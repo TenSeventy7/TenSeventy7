@@ -3,16 +3,16 @@ import { Image } from 'astro:assets';
 import avatar from '@site/assets/avatar.png';
 ---
 
-<section class="col-span-5 flex flex-col justify-start gap-2 lg:pe-12">
+<section class="col-span-5 flex flex-col justify-start gap-2 xl:pe-12">
     <div class="flex flex-col lg:flex-row items-center lg:items-center gap-2">
-        <span class="text-4xl/10 font-header text-outline font-medium text-center lg:mt-8 w-full lg:w-auto">Kamusta!</span>
+        <span class="text-4xl/10 lg:text-3xl/10 xl:text-4xl/10 font-header text-outline font-medium text-center lg:mt-8 w-full lg:w-auto">Kamusta!</span>
         <div class="flex items-center gap-2">
-            <span class="text-4xl/10 font-header text-outline font-medium lg:mt-8">I'm</span>
+            <span class="text-4xl/10 lg:text-3xl/10 xl:text-4xl/10 font-header text-outline font-medium lg:mt-8">I'm</span>
             <Image src={avatar} alt="John" class="h-32 w-32 inline-block -mx-2" />
-            <span id="name" class="text-4xl/10 font-header lg:mt-8 font-bold">John!</span>
+            <span id="name" class="text-4xl/10 lg:text-3xl/10 xl:text-4xl/10 font-header lg:mt-8 font-bold">John!</span>
         </div>
     </div>
-    <span class="text-3xl/10 font-header font-medium text-outline text-center lg:text-start">
+    <span class="text-2xl/9 xl:text-3xl/10 font-header font-medium text-outline text-center lg:text-start">
         <span>I'm a</span>
         <span class="font-semibold text-tertiary">junior software dev</span>
         <span>based in</span>
