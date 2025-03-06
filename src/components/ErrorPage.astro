@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+  errorCode: string;
+  description?: string;
+}
+
+const { errorCode, description = "An Error Occurred" } = Astro.props;
+const headers = [
+    "A wild 404 appeared! It ran away!",
+    "This page is temporarily fainted!",
+    "Professor Oak says: Now is not the time to access that!",
+    "This link needs more badges to be obedient!",
+    "Missingno. has corrupted this page!",
+    "Oops! Eggman scrambled this page!",
+    "Looks like Shadow Chaos Controlled this content elsewhere!",
+    "This page fell into a Special Stage!",
+    "Even the Tornado can't fly to this location!",
+    "You've hit a spring trap to nowhere!",
+    "This page was sent to the Graveyard!",
+    "Kaiba tore up this Blue-Eyes White Page!",
+    "The Heart of the Cards couldn't guide you here!",
+    "This link was banished to another dimension!",
+    "Exodia's pieces aren't all here yet!",
+    "404 Error: Virus Busting Required!",
+    "This link has been corrupted by a bug!",
+    "NetNavi couldn't access this area!",
+    "PET system can't establish connection!",
+    "This page needs a stronger Battle Chip to unlock!",
+    "This chest contains... nothing!",
+    "The Master Sword can't reveal this hidden page!",
+    "Epona can't jump to this location!",
+    "This page was lost in the Lost Woods!",
+    "It's dangerous to go alone, but this page isn't here anyway!",
+    "Your Poké Ball missed the page!",
+    "This page is currently training in the Hyperbolic Time Chamber!",
+    "Shadow Realm interference detected!",
+    "Dr. Wily has reprogrammed this page!",
+    "Jack Out! This network area is corrupted!",
+    "Link used the Ocarina, but the page didn't appear!",
+    "Chaos Control sent this page to another timeline!",
+    "This area needs to be unlocked with a Star Coin!",
+    "The E.M.M.I. has quarantined this sector!",
+    "Silver used psychokinesis to move this page elsewhere!",
+    "The Wind Fish hasn't dreamed this page yet!",
+    "The three Egyptian God Cards couldn't summon this page!",
+    "MegaMan.EXE can't find this area on the net!",
+    "You need a better hookshot to reach this location!"
+];
+---
+
+<Layout>
+  <Header />
+
+  <div class="flex flex-col items-center justify-center p-16 m-auto">
+    <span id="error-code" class="text-[10rem] font-header font-semibold">{errorCode}</span>
+
+    <div class="flex flex-col gap-3 text-tertiary font-semibold">
+      <span id="error-text" class="text-3xl ml-4 text-center">{description}</span>
+      <span class="text-center font-medium text-on-surface-variant">Oops, looks like we took a wrong turn. Let's get back on track!</span>
+      <div class="flex justify-center">
+        <a href="/" class="mt-4 bg-tertiary text-on-tertiary font-semibold px-6 py-2.5 rounded-full transition-all hover:bg-tertiary-hover active:bg-tertiary-active">Go Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ headers: headers }}>
+    const errorText = document.getElementById("error-text");
+    if (errorText) {
+      errorText.innerHTML = headers[Math.floor(Math.random() * headers.length)];
+    }
+  </script>
+</Layout>
+
+<style>
+  #error-code {
+    background: linear-gradient(
+      to bottom,
+      #F2C864 0%,
+      #F0BE67 25%,
+      #E8AA65 50%,
+      #F1A773 75%,
+      #F09F72 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #F2C864; /* Fallback color */
+  }
+</style>

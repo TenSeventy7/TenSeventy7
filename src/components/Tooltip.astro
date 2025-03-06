@@ -1,0 +1,66 @@
+---
+interface Props {
+    text: string;
+    position?: 'top' | 'bottom' | 'left' | 'right';
+    class?: string;
+}
+
+const { 
+    text,
+    position = 'bottom',
+    class: className = ''
+} = Astro.props;
+
+// Position-specific styles
+const positionClasses = {
+    top: 'bottom-full left-1/2 -translate-x-1/2 mb-2.5',
+    bottom: 'top-full left-1/2 -translate-x-1/2 mt-2.5',
+    left: 'right-full top-1/2 -translate-y-1/2 mr-2.5',
+    right: 'left-full top-1/2 -translate-y-1/2 ml-2.5'
+};
+---
+
+<div class={`tooltip-container ${className}`}>
+    <slot />
+    <div class={`tooltip font-medium bg-surface-container-highest text-on-surface ${positionClasses[position]}`}>
+        {text}
+    </div>
+</div>
+
+<style>
+    .tooltip-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip {
+        /* Positioning */
+        position: absolute;
+        z-index: 100;
+        transform: scale(0.8);
+        
+        /* MD3 styling */
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        white-space: nowrap;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.13);
+        
+        /* Animation */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                    visibility 0ms linear 150ms;
+    }
+
+    .tooltip-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                    visibility 0ms linear 0ms;
+    }
+</style>

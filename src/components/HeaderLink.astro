@@ -1,0 +1,19 @@
+---
+import Tooltip from './Tooltip.astro';
+
+interface Props {
+    icon: any,
+    name: string,
+    url: string,
+}
+
+const { icon, name, url } = Astro.props;
+const Icon = icon;
+---
+
+<Tooltip text={name}>
+    <a type="button" href={url}
+        class="bg-secondary text-on-secondary font-semibold p-2.75 rounded-full transition-all hover:bg-secondary-hover active:bg-secondary-active hidden md:block">
+        <Icon />
+    </a>
+</Tooltip>

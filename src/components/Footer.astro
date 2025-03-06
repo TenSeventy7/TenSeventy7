@@ -1,0 +1,16 @@
+---
+import { config } from "@site/config";
+---
+<footer class="mx-auto flex items-center justify-between w-full py-8 px-8 md:py-8 md:px-32 mt-auto">
+    <p class="text-sm font-medium text-outline mx-auto md:mx-0">
+        &copy; 2025 
+        <a href="/" class="font-header font-semibold hover:opacity-70 active:opacity-65 transition-all">{config.siteName}</a>. 
+        All rights reserved.
+    </p>
+
+    <nav class="gap-8 text-sm font-semibold text-on-surface-variant hidden md:flex">
+        {config.footerLinks.map((link) => (
+            <a href={link.url} class="hover:opacity-70 active:opacity-65 transition-all">{link.title}</a>
+        ))}
+    </nav>
+</footer>

@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import IconChevronRight from '~icons/tabler/chevron-right';
+import Project from '../Project.astro';
+import type { CollectionEntry } from 'astro:content';
+
+// Fetch all projects and sort by date
+const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
+const numProjects = projects.length;
+
+// Only get the 3 projects at most, preferably those that are ongoing (no end date)
+const sortedProjects = projects
+  .filter((project) => !project.data.end)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+if (sortedProjects.length < 3) {
+  const remainingProjects = projects
+    .filter((project) => project.data.end)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3 - sortedProjects.length);
+
+  sortedProjects.push(...remainingProjects);
+}
+
+// Then re-sort
+sortedProjects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<section class="col-span-5 md:pe-12 w-full">
+    <div class="flex flex-row items-center align-middle justify-between mb-8">
+        <div class="flex flex-col">
+            <h2 class="text-primary text-4xl font-semibold font-header mb-1">Projects</h2>
+            <p class="text-on-surface-variant opacity-60 text-sm hidden md:block">Here are some of the projects I've been working on.</p>
+        </div>
+
+        <!-- TODO: Projects showcase page -->
+        <!-- If > 3 projects, show link -->
+        <!-- {numProjects > 3 && (
+            <a href="/projects" class="py-auto flex items-center gap-2 font-medium text-primary hover:opacity-80 focus:opacity-60 transition-all">
+                <span>See more</span>
+                <IconChevronRight />
+            </a>
+        )} -->
+    </div>
+    
+    <div class="grid grid-cols-1 gap-4 w-full">
+        {sortedProjects.map((project) => (
+            <Project project={project} />
+        ))}
+    </div>
+</section>

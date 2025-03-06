@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+    project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+
+// Format date to just the year
+const date = new Date(project.data.date);
+let year = `${date.getFullYear()}`;
+
+const endDate = project.data.end ? new Date(project.data.end) : null;
+if (endDate) {
+    const endYear = endDate.getFullYear();
+    year = `${year} - ${endYear}`;
+} else {
+    year = `${year} - Present`;
+}
+---
+
+<a href={project.data.link} class="w-full">
+    <div class="
+        flex flex-row items-center
+        rounded-full w-full p-3.5 gap-6
+        border border-surface-container-highest bg-surface-container-high
+        hover:scale-103 active:scale-98
+        hover:shadow-md active:shadow-sm
+        hover:bg-surface-container-highest active:bg-surface-container
+        duration-300 ease-in-out transition-all">
+        <Image class="rounded-full w-14 h-14 pointer-events-none select-none" draggable={false} src={project.data.image} alt={project.data.title} />
+        <div class="flex flex-col justify-center">
+            <p class="font-medium text-sm text-secondary leading-tight">{project.data.position}</p>
+            <p class="font-header font-semibold text-lg md:text-2xl text-primary leading-tight">{project.data.title}</p>
+        </div>
+        <p class="font-medium text-outline ml-auto text-sm md:text-base pe-4 md:pe-8">{year}</p>
+    </div>
+</a>

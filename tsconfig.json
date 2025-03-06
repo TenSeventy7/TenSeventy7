@@ -1,5 +1,14 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // Use the @site alias to import files from the src directory
+      // The 'site' NPM package is a scummy AI package anyway that we won't use
+      // so we can safely overwrite it
+      "@site/*": ["src/*"]
+    }
+  }
 }

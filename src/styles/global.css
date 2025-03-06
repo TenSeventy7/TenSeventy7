@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@theme {
+    /* Existing font definitions */
+    --font-sans: "Montserrat", Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    --font-header: "Montserrat Alternates", Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+
+    --ease-in-out: cubic-bezier(0.2, 0.0, 0, 1.0);
+
+    --font-weight-light: 350;
+    --font-weight-normal: 450;
+    --font-weight-medium: 550;
+    --font-weight-semibold: 620;
+    --font-weight-bold: 750;
+
+    --text-4xl: 2rem;
+    --text-3xl: 1.675rem;
+    --text-2xl: 1.5rem;
+    --text-xl: 1.25rem;
+    --text-lg: 1.125rem;
+    --text-base: 1rem;
+
+    /* Primary colors */
+    --color-primary: var(--mat-color-primary);
+    --color-primary-hover: var(--mat-color-primary-hover);
+    --color-primary-active: var(--mat-color-primary-active);
+    --color-on-primary: var(--mat-color-on-primary);
+    --color-primary-container: var(--mat-color-primary-container);
+    --color-on-primary-container: var(--mat-color-on-primary-container);
+
+    /* Secondary colors */
+    --color-secondary: var(--mat-color-secondary);
+    --color-secondary-hover: var(--mat-color-secondary-hover);
+    --color-secondary-active: var(--mat-color-secondary-active);
+    --color-on-secondary: var(--mat-color-on-secondary);
+    --color-secondary-container: var(--mat-color-secondary-container);
+    --color-on-secondary-container: var(--mat-color-on-secondary-container);
+
+    /* Tertiary colors */
+    --color-tertiary: var(--mat-color-tertiary);
+    --color-tertiary-hover: var(--mat-color-tertiary-hover);
+    --color-tertiary-active: var(--mat-color-tertiary-active);
+    --color-on-tertiary: var(--mat-color-on-tertiary);
+    --color-tertiary-container: var(--mat-color-tertiary-container);
+    --color-on-tertiary-container: var(--mat-color-on-tertiary-container);
+
+    /* Error colors */
+    --color-error: var(--mat-color-error);
+    --color-on-error: var(--mat-color-on-error);
+    --color-error-container: var(--mat-color-error-container);
+    --color-on-error-container: var(--mat-color-on-error-container);
+
+    /* Background/Surface colors */
+    --color-background: var(--mat-color-background);
+    --color-on-background: var(--mat-color-on-background);
+    --color-surface: var(--mat-color-surface);
+    --color-on-surface: var(--mat-color-on-surface);
+    --color-surface-variant: var(--mat-color-surface-variant);
+    --color-on-surface-variant: var(--mat-color-on-surface-variant);
+
+    /* Other UI colors */
+    --color-outline: var(--mat-color-outline);
+    --color-outline-variant: var(--mat-color-outline-variant);
+    --color-shadow: var(--mat-color-shadow);
+    --color-scrim: var(--mat-color-scrim);
+
+    /* Surface containers */
+    --color-surface-dim: var(--mat-color-surface-dim);
+    --color-surface-bright: var(--mat-color-surface-bright);
+    --color-surface-container-lowest: var(--mat-color-surface-container-lowest);
+    --color-surface-container-low: var(--mat-color-surface-container-low);
+    --color-surface-container: var(--mat-color-surface-container);
+    --color-surface-container-high: var(--mat-color-surface-container-high);
+    --color-surface-container-highest: var(--mat-color-surface-container-highest);
+}
+
+:root {
+    /* Primary colors */
+    --mat-color-primary: rgb(138 80 34);
+    --mat-color-primary-hover: rgb(110 57 12);
+    --mat-color-primary-active: rgb(48 20 0);
+    --mat-color-on-primary: rgb(255 255 255);
+    --mat-color-primary-container: rgb(255 220 198);
+    --mat-color-on-primary-container: rgb(110 57 12);
+    
+    /* Secondary colors */
+    --mat-color-secondary: rgb(117 88 69);
+    --mat-color-secondary-hover: rgb(91 65 48);
+    --mat-color-secondary-active: rgb(43 23 8);
+    --mat-color-on-secondary: rgb(255 255 255);
+    --mat-color-secondary-container: rgb(255 220 198);
+    --mat-color-on-secondary-container: rgb(91 65 48);
+    
+    /* Tertiary colors */
+    --mat-color-tertiary: rgb(95 97 52);
+    --mat-color-tertiary-hover: rgb(71 73 31);
+    --mat-color-tertiary-active: rgb(28 29 0);
+    --mat-color-on-tertiary: rgb(255 255 255);
+    --mat-color-tertiary-container: rgb(229 230 174);
+    --mat-color-on-tertiary-container: rgb(71 73 31);
+    
+    /* Error colors */
+    --mat-color-error: rgb(186 26 26);
+    --mat-color-on-error: rgb(255 255 255);
+    --mat-color-error-container: rgb(255 218 214);
+    --mat-color-on-error-container: rgb(147 0 10);
+    
+    /* Background/Surface colors */
+    --mat-color-background: rgb(255 248 245);
+    --mat-color-on-background: rgb(34 26 21);
+    --mat-color-surface: rgb(255 248 245);
+    --mat-color-on-surface: rgb(34 26 21);
+    --mat-color-surface-variant: rgb(243 222 211);
+    --mat-color-on-surface-variant: rgb(82 68 59);
+    
+    /* Other UI colors */
+    --mat-color-outline: rgb(132 116 106);
+    --mat-color-outline-variant: rgb(215 195 183);
+    --mat-color-shadow: rgb(0 0 0);
+    --mat-color-scrim: rgb(0 0 0);
+    
+    /* Surface containers */
+    --mat-color-surface-dim: rgb(231 215 206);
+    --mat-color-surface-bright: rgb(255 248 245);
+    --mat-color-surface-container-lowest: rgb(255 255 255);
+    --mat-color-surface-container-low: rgb(255 241 234);
+    --mat-color-surface-container: rgb(251 235 226);
+    --mat-color-surface-container-high: rgb(246 229 220);
+    --mat-color-surface-container-highest: rgb(240 223 214);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Primary colors */
+        --mat-color-primary: rgb(255 183 133);
+        --mat-color-primary-hover: rgb(220 150 100);
+        --mat-color-primary-active: rgb(190 120 70);
+        --mat-color-on-primary: rgb(80 37 0);
+        --mat-color-primary-container: rgb(110 57 12);
+        --mat-color-on-primary-container: rgb(255 220 198);
+        
+        /* Secondary colors */
+        --mat-color-secondary: rgb(228 191 168);
+        --mat-color-secondary-hover: rgb(190 150 130);
+        --mat-color-secondary-active: rgb(150 110 90);
+        --mat-color-on-secondary: rgb(66 43 27);
+        --mat-color-secondary-container: rgb(91 65 48);
+        --mat-color-on-secondary-container: rgb(255 220 198);
+        
+        /* Tertiary colors */
+        --mat-color-tertiary: rgb(201 202 148);
+        --mat-color-tertiary-hover: rgb(160 160 120);
+        --mat-color-tertiary-active: rgb(120 120 80);
+        --mat-color-on-tertiary: rgb(49 50 10);
+        --mat-color-tertiary-container: rgb(71 73 31);
+        --mat-color-on-tertiary-container: rgb(229 230 174);
+        
+        /* Error colors */
+        --mat-color-error: rgb(255 180 171);
+        --mat-color-on-error: rgb(105 0 5);
+        --mat-color-error-container: rgb(147 0 10);
+        --mat-color-on-error-container: rgb(255 218 214);
+        
+        /* Background/Surface colors */
+        --mat-color-background: rgb(25 18 13);
+        --mat-color-on-background: rgb(240 223 214);
+        --mat-color-surface: rgb(25 18 13);
+        --mat-color-on-surface: rgb(240 223 214);
+        --mat-color-surface-variant: rgb(82 68 59);
+        --mat-color-on-surface-variant: rgb(215 195 183);
+        
+        /* Other UI colors */
+        --mat-color-outline: rgb(159 141 131);
+        --mat-color-outline-variant: rgb(82 68 59);
+        --mat-color-shadow: rgb(0 0 0);
+        --mat-color-scrim: rgb(0 0 0);
+        
+        /* Surface containers */
+        --mat-color-surface-dim: rgb(25 18 13);
+        --mat-color-surface-bright: rgb(65 55 49);
+        --mat-color-surface-container-lowest: rgb(20 13 8);
+        --mat-color-surface-container-low: rgb(34 26 21);
+        --mat-color-surface-container: rgb(38 30 25);
+        --mat-color-surface-container-high: rgb(49 40 34);
+        --mat-color-surface-container-highest: rgb(60 51 45);
+    }    
+}

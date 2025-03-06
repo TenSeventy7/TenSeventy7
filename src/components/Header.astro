@@ -1,0 +1,48 @@
+    ---
+    import { config } from '@site/config';
+
+    import HeaderLink from './HeaderLink.astro';
+
+    import brandLight from '@site/assets/brand/light/logo.svg';
+    import brandDark from '@site/assets/brand/dark/logo.svg';
+    ---
+    <header class="sticky top-0 z-50 bg-surface transition-colors duration-300" id="main-header">
+        <nav class="mx-auto flex items-center justify-between w-full py-8 px-8 md:py-10 md:px-32">
+            <a href="/" class="flex items-center gap-2 hover:opacity-80 focus:opacity-60 transition-all">
+                <img src={brandLight.src} alt="tenseventyseven" class="h-6 dark:hidden" />
+                <img src={brandDark.src} alt="tenseventyseven" class="h-6 hidden dark:block" />
+            </a>
+
+            <div class="flex flex-row gap-3 align-middle items-center">
+                {config.headerLinks.map((link) => (
+                    <HeaderLink icon={link.icon} url={link.url} name={link.name} />
+                ))}
+                <div class="py-auto ms-1">
+                    <a type="button" href="https://blog.tenseventyseven.xyz/" class="bg-primary text-on-primary font-semibold px-6 py-3 rounded-full transition-all hover:bg-primary-hover active:bg-primary-active">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        // Add scroll event handler to change header background
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            
+            const toggleHeaderBackground = () => {
+                if (window.scrollY > 10) {
+                    header?.classList.remove('bg-surface');
+                    header?.classList.add('bg-surface-container');
+                } else {
+                    header?.classList.remove('bg-surface-container');
+                    header?.classList.add('bg-surface');
+                }
+            };
+            
+            // Set initial state
+            toggleHeaderBackground();
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', toggleHeaderBackground);
+        });
+    </script>
