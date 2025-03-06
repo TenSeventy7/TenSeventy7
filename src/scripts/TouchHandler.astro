@@ -1,0 +1,63 @@
+---
+---
+
+<script>
+  // This script runs only on the client side
+  document.addEventListener('DOMContentLoaded', () => {
+    // Find all elements with touch: classes
+    const touchElements = document.querySelectorAll('[class*="tap:"]');
+    
+    touchElements.forEach(element => {
+      // Extract the touch classes from the element
+      const classList = Array.from(element.classList);
+      const touchClasses = classList
+        .filter(cls => cls.startsWith('tap:'))
+        .map(cls => cls.replace('tap:', ''));
+      const hoverClasses = classList
+        .filter(cls => cls.startsWith('hover:'));
+
+      // Remove the touch classes from the element
+      touchClasses.forEach(cls => element.classList.remove(`tap:${cls}`));
+        
+      // For storing which hover classes are currently removed
+      let removedHoverClasses: string[] = [];
+      
+      const startTap = () => {
+        // Store the hover classes and remove them temporarily
+        removedHoverClasses = [...hoverClasses];
+        
+        // Remove hover classes temporarily
+        hoverClasses.forEach(cls => element.classList.remove(cls));
+        
+        // Add tap classes to the beginning of the class list
+        touchClasses.forEach(cls => {
+          const currentClasses = element.className.split(' ').filter(Boolean);
+          if (!currentClasses.includes(cls)) {
+            element.className = `${cls} ${element.className}`.trim();
+          }
+        });
+      };
+      
+      const endTap = () => {
+        setTimeout(() => {
+          // Remove tap classes
+          touchClasses.forEach(cls => element.classList.remove(cls));
+          
+          // Restore hover classes
+          removedHoverClasses.forEach(cls => element.classList.add(cls));
+          removedHoverClasses = [];
+        }, 150);
+      };
+      
+      // Add event listeners to handle touch interactions
+      element.addEventListener('touchstart', startTap, { passive: true });
+      element.addEventListener('touchend', endTap);
+      element.addEventListener('touchcancel', endTap);
+      
+      // Handle mouse events too for consistency across devices
+      element.addEventListener('mousedown', startTap);
+      element.addEventListener('mouseup', endTap);
+      element.addEventListener('mouseleave', endTap);
+    });
+  });
+</script>

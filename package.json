@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "@iconify-json/tabler": "^1.2.16",
+    "cross-env": "^7.0.3",
+    "globby": "^11.0.1",
     "unplugin-icons": "^22.1.0"
   }
 }

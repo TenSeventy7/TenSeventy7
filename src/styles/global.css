@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../generated/tap-safelist.txt";
 
 @theme {
     /* Existing font definitions */

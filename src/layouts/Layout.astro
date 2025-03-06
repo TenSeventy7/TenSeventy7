@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { config } from '../config';
 import Footer from '@site/components/Footer.astro';
+import Scripts from '@site/layouts/Scripts.astro';
 
 interface Props {
   title?: string;
@@ -61,5 +62,6 @@ const pageDescription = description || config.description;
 		  <slot />
 		</main>
 		<Footer />
+		<Scripts />
 	  </body>
 </html>
