@@ -9,8 +9,8 @@
     <header class="sticky top-0 z-50 bg-surface transition-colors duration-300" id="main-header">
         <nav class="mx-auto flex items-center justify-between w-full py-8 px-8 md:py-10 md:px-32">
             <a href="/" class="flex items-center gap-2 hover:opacity-80 focus:opacity-60 transition-all">
-                <img src={brandLight.src} alt="tenseventyseven" class="h-6 dark:hidden" />
-                <img src={brandDark.src} alt="tenseventyseven" class="h-6 hidden dark:block" />
+                <img src={brandLight.src} draggable={false} alt="tenseventyseven" class="h-6 dark:hidden pointer-events-none select-none" />
+                <img src={brandDark.src} draggable={false} alt="tenseventyseven" class="h-6 hidden dark:block pointer-events-none select-none" />
             </a>
 
             <div class="flex flex-row gap-3 align-middle items-center">
