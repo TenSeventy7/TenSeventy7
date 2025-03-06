@@ -6,7 +6,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     // Find all elements with touch: classes
     const touchElements = document.querySelectorAll('[class*="tap:"]');
-    
+
     touchElements.forEach(element => {
       // Extract the touch classes from the element
       const classList = Array.from(element.classList);
@@ -38,14 +38,19 @@
         });
       };
       
-      const endTap = () => {
+      const endTap = (event?: Event) => {
+        // Flag to check if this is a touch event
+        const isTouchEvent = event && (event.type === 'touchend' || event.type === 'touchcancel');
+        
         setTimeout(() => {
           // Remove tap classes
           touchClasses.forEach(cls => element.classList.remove(cls));
           
           // Restore hover classes
-          removedHoverClasses.forEach(cls => element.classList.add(cls));
-          removedHoverClasses = [];
+          if (!isTouchEvent) {
+            removedHoverClasses.forEach(cls => element.classList.add(cls));
+            removedHoverClasses = [];
+          }
         }, 150);
       };
       
