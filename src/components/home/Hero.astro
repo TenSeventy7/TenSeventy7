@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import avatar from '@site/assets/avatar.png';
+
+import IconMail from '~icons/tabler/mail';
 ---
 
 <section class="col-span-5 flex flex-col justify-start gap-2 xl:pe-12">
@@ -23,8 +25,12 @@ import avatar from '@site/assets/avatar.png';
     </span>
 
     <div class="flex flex-col gap-4 mt-4 items-center lg:items-start">
-        <span class="font-semibold text-secondary opacity-75">Want to ask me something?</span>
-        <a href="mailto:kamusta@tenseventyseven.xyz" class="btn-tertiary btn-rect w-fit">Contact Me</a>
+        <span class="font-semibold text-tertiary opacity-75">Want to ask me something?</span>
+        <a href="mailto:kamusta@tenseventyseven.xyz"
+           class="btn-tertiary btn-rect w-fit btn-with-icon">
+            <IconMail class="w-6 h-6" />
+            Send an Email
+        </a>
     </div>
 </section>
 
