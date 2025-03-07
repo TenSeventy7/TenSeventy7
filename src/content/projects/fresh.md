@@ -1,6 +1,6 @@
 ---
-title: "Fresh"
-position: "Design/UX/Consultant"
+title: "The Fresh Project"
+position: "Consultant"
 description: "A short description of the first project"
 link: "https://fresh.tenseventyseven.xyz/"
 image: "@site/assets/images/projects/fresh.png"
