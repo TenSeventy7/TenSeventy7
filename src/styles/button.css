@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.btn-primary {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active;
+}
+
+.btn-secondary {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-secondary text-on-secondary hover:bg-secondary-hover active:bg-secondary-active;
+}
+
+.btn-tertiary {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-tertiary text-on-tertiary hover:bg-tertiary-hover active:bg-tertiary-active;
+}
+
+.btn-rect {
+    @apply px-6 py-3;
+}
+
+.btn-square {
+    @apply p-2.75;
+}
