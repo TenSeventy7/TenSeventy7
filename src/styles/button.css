@@ -22,3 +22,7 @@
 .btn-square {
     @apply p-2.75;
 }
+
+.btn-with-icon {
+    @apply flex flex-row gap-2.5 items-center;
+}
