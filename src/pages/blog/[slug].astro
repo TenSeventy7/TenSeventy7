@@ -15,7 +15,7 @@ const { slug } = Astro.params;
 const post = await getPost(slug);
 ---
 
-<Layout title="blog">
+<Layout title={`${post.title} | blog`}>
 	<Header />
 
     <article class="p-3 mt-3 flex flex-col">
