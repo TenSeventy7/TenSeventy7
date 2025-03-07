@@ -1,0 +1,168 @@
+---
+import Layout from '@site/layouts/Layout.astro';
+import Header from '@site/components/Header.astro';
+import PostCard from '@site/components/blog/PostCard.astro';
+
+import IconChevronRight from '~icons/tabler/chevron-right';
+import IconChevronLeft from '~icons/tabler/chevron-left';
+
+import { getPosts } from '@site/lib/blog-data';
+
+export async function getStaticPaths() {
+  const pages = [];
+  let cursor = null;
+  let pageNumber = 1;
+  let hasMorePages = true;
+  
+  // Fetch pages one by one using cursors
+  while (hasMorePages && pageNumber <= 15) { // Limit to 15 pages for safety
+    console.log(`🔎 Fetching page ${pageNumber} with cursor: ${cursor}`);
+    
+    // Get current page of posts with cursor
+    const data = await getPosts(cursor);
+    const pageInfo = data.publication.posts.pageInfo;
+    const posts = data.publication.posts.edges;
+    
+    // Store this page's data and metadata
+    pages.push({
+      params: { page: pageNumber.toString() },
+      props: { 
+        posts,
+        pageInfo,
+        currentPage: pageNumber,
+        prevCursor: pageNumber > 1 ? cursor : null,
+        nextCursor: pageInfo.hasNextPage ? pageInfo.endCursor : null,
+        totalPages: pageNumber
+      }
+    });
+    
+    // Update for next iteration
+    if (pageInfo.hasNextPage) {
+      cursor = pageInfo.endCursor;
+      pageNumber++;
+    } else {
+      hasMorePages = false;
+    }
+  }
+  
+  // Update totalPages for all pages
+  const totalPages = pages.length;
+  pages.forEach(page => {
+    page.props.totalPages = totalPages;
+  });
+  
+  console.log(`Generated ${pages.length} pages using cursor-based pagination`);
+  return pages;
+}
+
+// Get the props that were passed from getStaticPaths
+const { posts, pageInfo, currentPage, prevCursor, nextCursor, totalPages } = Astro.props;
+
+// Generate URL paths for navigation
+const prevPageUrl = currentPage > 1 ? `/blog/${currentPage - 1}` : null;
+const nextPageUrl = pageInfo.hasNextPage ? `/blog/${currentPage + 1}` : null;
+
+// Generate pagination numbers
+function generatePaginationArray(current, total, maxVisible = 5) {
+  if (total <= maxVisible) {
+    // If we have fewer pages than the maximum to display, show all
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+
+  // Calculate the start and end of the pagination array
+  let start = Math.max(current - Math.floor(maxVisible / 2), 1);
+  let end = start + maxVisible - 1;
+
+  // Adjust if we're near the end
+  if (end > total) {
+    end = total;
+    start = Math.max(end - maxVisible + 1, 1);
+  }
+
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
+
+const paginationNumbers = generatePaginationArray(currentPage, totalPages, 5);
+---
+
+<Layout title="Blog">
+    <Header />
+    <div class="py-8 px-8 lg:px-16 xl:px-32 w-full">
+        <h1 class="text-3xl font-semibold mb-8">Blog Posts</h1>
+        {!posts || posts.length === 0 ? (
+            <div class="text-center py-10">
+                <p class="text-lg text-gray-600">No posts found. Please check back later.</p>
+            </div>
+        ) : (
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {posts.map((post: { node: any }) => <PostCard post={post?.node} />)}
+            </div>
+        )}
+        
+        <div class="flex justify-center items-center mt-8 gap-2">
+            {/* Previous button - always visible but conditionally disabled */}
+            <a href={prevPageUrl || '#'} 
+               class={`btn-rect btn-with-icon rounded-lg text-sm flex items-center ${
+                 prevPageUrl 
+                   ? 'btn-primary cursor-pointer' 
+                   : 'btn-primary-disabled pointer-events-none'
+               }`}
+               aria-label="Go to previous page"
+               aria-disabled={!prevPageUrl}>
+                <IconChevronLeft class="w-4 h-4" />
+                <span>Prev</span>
+            </a>
+            
+            {/* Page numbers */}
+            <div class="flex items-center gap-2 mx-2">
+                {/* If we're not starting from page 1, show ellipsis */}
+                {paginationNumbers[0] > 1 && (
+                    <>
+                        <a href={`/blog/1`}
+                        class="btn-square w-10 h-10 flex items-center justify-center rounded-full text-sm btn-primary-text">
+                            1
+                        </a>
+                        <span class="w-10 h-10 flex items-center justify-center font-medium text-outline">...</span>
+                    </>
+                )}
+
+                {/* Display the calculated page numbers */}
+                {paginationNumbers.map(num => (
+                    <a href={`/blog/${num}`}
+                       class={`btn-square w-10 h-10 flex items-center justify-center rounded-full text-sm ${
+                         num === currentPage ? 
+                         'btn-primary' : 
+                         'btn-primary-text'
+                       }`}
+                       aria-current={num === currentPage ? 'page' : undefined}>
+                        {num}
+                    </a>
+                ))}
+                
+                {/* If we're not showing the last page, show ellipsis */}
+                {paginationNumbers[paginationNumbers.length - 1] < totalPages && (
+                    <>
+                        <span class="w-10 h-10 flex items-center justify-center font-medium text-outline">...</span>
+                        <a href={`/blog/${totalPages}`}
+                        class="btn-square w-10 h-10 flex items-center justify-center rounded-full text-sm btn-primary-text">
+                            ${totalPages}
+                        </a>
+                    </>
+                )}
+            </div>
+            
+            {/* Next button - always visible but conditionally disabled */}
+            <a href={nextPageUrl || '#'} 
+               class={`btn-rect btn-with-icon rounded-lg text-sm flex items-center ${
+                 nextPageUrl 
+                   ? 'btn-primary cursor-pointer' 
+                   : 'btn-primary-disabled pointer-events-none'
+               }`}
+               aria-label="Go to next page"
+               aria-disabled={!nextPageUrl}>
+                <span>Next</span>
+                <IconChevronRight class="w-4 h-4" />
+            </a>
+        </div>
+    </div>
+</Layout>

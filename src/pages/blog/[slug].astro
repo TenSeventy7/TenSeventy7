@@ -1,0 +1,38 @@
+---
+import Layout from '@site/layouts/Layout.astro';
+import Header from '@site/components/Header.astro';
+
+import {getAllPosts, getPost} from '@site/lib/blog-data';
+
+export async function getStaticPaths() {
+  const data = await getAllPosts();
+  const allPosts = data.publication.posts.edges;
+  return allPosts.map((post: { node: { slug: any; }; }) => {
+    return {params: { slug: post.node.slug }}
+  })
+}
+const { slug } = Astro.params;
+const post = await getPost(slug);
+---
+
+<Layout title="blog">
+	<Header />
+
+    <article class="p-3 mt-3 flex flex-col">
+        <img 
+            class="rounded-lg" 
+            src={post.coverImage?.url} 
+            alt={post.title} />
+        <h1 class="text-4xl font-bold pt-5">{post?.title}</h1>
+        <h2 class="text-xl pt-3 pb-3">{post.subtitle}</h2>
+    
+        <!--
+        <div class="flex flex-wrap justify-center items-center mt-5 mb-5">
+          {post?.tags.map((tag: any) => <Tag tag={tag} />)}
+        </div> -->
+    
+        <div class="post-details">
+          <p set:html={post?.content?.html} />
+        </div>
+    </article>
+</Layout>

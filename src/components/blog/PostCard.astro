@@ -1,0 +1,79 @@
+---
+import IconCalendarEvent from '~icons/tabler/calendar-event';
+import IconBook from '~icons/tabler/book';
+
+interface Props {
+    post: any,
+}
+
+const { post } = Astro.props;
+const hasCover = post?.coverImage != null;
+let subtitle = post.subtitle;
+if (subtitle == null || subtitle.length < 1) {
+    subtitle = post.brief;
+}
+
+// Date is in the format "2021-09-01T00:00:00Z"
+const date = new Date(post.publishedAt);
+const formattedDate = date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+
+
+// Make date relative to current date
+const now = new Date();
+const diff = now.getTime() - date.getTime();
+const diffInDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+const diffInHours = Math.floor(diff / (1000 * 60 * 60));
+const diffInMinutes = Math.floor(diff / (1000 * 60));
+
+// Format relative date
+let relativeDate;
+if (diffInDays >= 7) {
+    relativeDate = formattedDate; // Use formatted date for older posts
+} else if (diffInDays > 1) {
+    relativeDate = `${diffInDays} days ago`;
+} else if (diffInDays === 1) {
+    relativeDate = 'Yesterday';
+} else if (diffInHours > 0) {
+    relativeDate = `${diffInHours} ${diffInHours === 1 ? 'hour' : 'hours'} ago`;
+} else if (diffInMinutes > 0) {
+    relativeDate = `${diffInMinutes} ${diffInMinutes === 1 ? 'minute' : 'minutes'} ago`;
+} else {
+    relativeDate = 'Just now';
+}
+---
+
+<a href={`/blog/${post.slug}`} class="col-span-1">
+    <div class="rounded-2xl shadow-lg bg-surface-container h-full flex flex-col
+                hover:shadow-xl hover:scale-102 hover:bg-surface-container-high
+                tap:scale-98 tap:shadow-md tap:bg-surface-container-highest
+                duration-300 ease-in-out transition-all">
+        {hasCover && (
+            <img
+                class="rounded-t-2xl w-full h-48 object-cover"
+                src={post.coverImage.url}
+                alt={post.coverImage.alt}
+            />
+        )}
+        <div class="px-4 py-5 flex flex-col gap-2 h-full">
+            <div class="flex flex-col gap-1">
+                <span class="text-sm text-on-primary-container btn-with-icon font-medium opacity-75">
+                    <IconCalendarEvent class="w-4 h-4" />
+                    {relativeDate}
+                </span>
+                <h2 class="text-2xl text-on-primary-container font-header font-semibold mt-1">{post.title}</h2>
+            </div>
+            <p class="text-outline line-clamp-3">{subtitle}</p>
+            <div class="flex-grow"></div>
+            <div class="border-t border-outline/40 pt-3 opacity-75">
+                <span class="text-sm text-on-primary-container btn-with-icon font-medium">
+                    <IconBook class="w-4 h-4" />
+                    {post.readTimeInMinutes} min read
+                </span>
+            </div>
+        </div>
+    </div>
+</a>

@@ -5,14 +5,47 @@
     @apply bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active;
 }
 
+.btn-primary-text {
+    @apply font-semibold transition-all;
+    @apply text-primary hover:bg-primary-hover hover:text-on-primary active:bg-primary-active active:text-on-primary;
+}
+
+.btn-primary-disabled {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-primary text-on-primary cursor-not-allowed;
+    @apply opacity-60;
+}
+
 .btn-secondary {
     @apply font-semibold rounded-full transition-all;
     @apply bg-secondary text-on-secondary hover:bg-secondary-hover active:bg-secondary-active;
 }
 
+.btn-secondary-text {
+    @apply font-semibold transition-all;
+    @apply text-secondary hover:bg-secondary-hover hover:text-on-secondary active:bg-secondary-active active:text-on-secondary;
+}
+
+.btn-secondary-disabled {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-secondary text-on-secondary cursor-not-allowed;
+    @apply opacity-60;
+}
+
 .btn-tertiary {
     @apply font-semibold rounded-full transition-all;
     @apply bg-tertiary text-on-tertiary hover:bg-tertiary-hover active:bg-tertiary-active;
+}
+
+.btn-tertiary-text {
+    @apply font-semibold transition-all;
+    @apply text-tertiary hover:bg-tertiary-hover hover:text-on-tertiary active:bg-tertiary-active active:text-on-tertiary;
+}
+
+.btn-tertiary-disabled {
+    @apply font-semibold rounded-full transition-all;
+    @apply bg-tertiary text-on-tertiary cursor-not-allowed;
+    @apply opacity-60;
 }
 
 .btn-rect {
