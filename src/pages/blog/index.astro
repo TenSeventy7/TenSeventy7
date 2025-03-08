@@ -1,6 +1,7 @@
 ---
 import Layout from '@site/layouts/Layout.astro';
 import Header from '@site/components/Header.astro';
+import BlogHero from '@site/components/blog/BlogHero.astro';
 import PostListing from '@site/components/blog/PostListing.astro';
 
 import { getPosts } from '@site/lib/blog/data';
@@ -20,8 +21,9 @@ const { prevPageUrl, nextPageUrl } = getNavigationUrls(currentPage, pageInfo.has
 ---
 
 <Layout title="blog">
-    <Header />
-    <section class="py-8 px-8 lg:px-16 xl:px-32 w-full">
+    <Header immersive />
+    <BlogHero />
+    <section class="py-8 px-8 lg:px-16 xl:px-32 w-full mt-[8rem] lg:mt-[15rem] z-1 relative">
         <PostListing 
             posts={posts}
             currentPage={currentPage}

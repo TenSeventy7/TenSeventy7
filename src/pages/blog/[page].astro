@@ -68,8 +68,16 @@ const { prevPageUrl, nextPageUrl } = getNavigationUrls(currentPage, pageInfo.has
 ---
 
 <Layout title={`page ${currentPage} | blog`}>
-    <Header />
-    <section class="py-8 px-8 lg:px-16 xl:px-32 w-full">
+    <Header immersive />
+    <section class="blog-hero z-0">
+      <div class="flex flex-row py-8 px-8 lg:px-16 xl:px-32 w-full items-center">
+          <div class="flex flex-row gap-3 pt-4 items-center select-none">
+              <h1 class="blog-hero-title-alt text-[2.5rem] font-bold pb-1 font-header">page</h1>
+              <h1 class="blog-hero-title-alt text-[1.9rem] font-bold font-header">{currentPage}</h1>
+          </div>
+      </div>
+    </section>
+    <section class="flex flex-col gap-8 py-8 px-8 lg:px-16 xl:px-32 w-full mt-[5rem] z-1 relative">
         <PostListing 
             posts={posts}
             currentPage={currentPage}

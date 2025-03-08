@@ -1,0 +1,33 @@
+
+.blog-hero {
+    background: linear-gradient(180deg, #CEEDFB, var(--color-surface));
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .blog-hero {
+        background: linear-gradient(180deg, #1A202C, var(--color-surface));
+    }
+}
+
+.blog-hero-title {
+    background: linear-gradient(90deg, #00ECBC, #007ADF, #007ADF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #007ADF;
+    display: inline-block;
+}
+
+.blog-hero-title-alt {
+    background: linear-gradient(90deg, #00ECBC, #007ADF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #007ADF;
+    display: inline-block;
+}
