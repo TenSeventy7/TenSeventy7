@@ -1,19 +1,25 @@
-    ---
-    import { config } from '@site/config';
+---
+import { config } from '@site/config';
 
-    import HeaderLink from './HeaderLink.astro';
+import HeaderLink from './HeaderLink.astro';
 
-    import brandLight from '@site/assets/brand/light/logo.svg';
-    import brandDark from '@site/assets/brand/dark/logo.svg';
-    ---
-    <header class="sticky top-0 z-50 bg-surface transition-colors duration-300" id="main-header">
+import brandLight from '@site/assets/brand/light/logo.svg';
+import brandDark from '@site/assets/brand/dark/logo.svg';
+
+interface Props {
+    immersive?: boolean;
+}
+const { immersive = false } = Astro.props;
+
+---
+    <header class=`sticky top-0 z-50 transition-colors duration-300 ${!immersive ? 'bg-surface' : ''}` id="main-header">
         <nav class="mx-auto flex items-center justify-between w-full py-8 px-4 sm:px-8 lg:py-10 lg:px-32">
             <a href="/" class="flex items-center gap-2 hover:opacity-80 focus:opacity-60 transition-all">
                 <img src={brandLight.src} draggable={false} alt="tenseventyseven" class="h-6 dark:hidden pointer-events-none select-none" />
                 <img src={brandDark.src} draggable={false} alt="tenseventyseven" class="h-6 hidden dark:block pointer-events-none select-none" />
             </a>
 
-            <div class="flex flex-row gap-3 align-middle items-center">
+            <div id="links" class=`flex flex-row gap-3 align-middle items-center transition-all duration-300 ${immersive ? 'opacity-75' : 'opacity-100'}`>
                 {config.headerLinks.map((link) => (
                     <HeaderLink icon={link.icon} url={link.url} name={link.name} />
                 ))}
@@ -24,18 +30,28 @@
         </nav>
     </header>
 
-    <script>
+    <script is:inline define:vars={{ immersive }}>
         // Add scroll event handler to change header background
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('main-header');
+            const links = document.getElementById('links');
             
             const toggleHeaderBackground = () => {
                 if (window.scrollY > 10) {
-                    header?.classList.remove('bg-surface');
-                    header?.classList.add('bg-surface-container');
+                    if (immersive) {
+                        header?.classList.add('bg-surface-container');
+                        links?.classList.remove('opacity-75');
+                    } else {
+                        header?.classList.remove('bg-surface');
+                        header?.classList.add('bg-surface-container');
+                    }
                 } else {
                     header?.classList.remove('bg-surface-container');
-                    header?.classList.add('bg-surface');
+                    if (!immersive) {
+                        header?.classList.add('bg-surface');
+                    } else {
+                        links?.classList.add('opacity-75');
+                    }
                 }
             };
             
