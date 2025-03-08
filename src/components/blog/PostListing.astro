@@ -1,0 +1,33 @@
+---
+import PostCard from '@site/components/blog/PostCard.astro';
+import Pagination from './Pagination.astro';
+
+export interface Props {
+  posts: any[];
+  currentPage: number;
+  totalPages: number;
+  prevPageUrl: string | null;
+  nextPageUrl: string | null;
+}
+
+const { posts, currentPage, totalPages, prevPageUrl, nextPageUrl } = Astro.props;
+---
+
+<div>
+    {!posts || posts.length === 0 ? (
+        <div class="text-center py-10">
+            <p class="text-lg text-gray-600">No posts found. Please check back later.</p>
+        </div>
+    ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {posts.map((post) => <PostCard post={post?.node} />)}
+        </div>
+    )}
+    
+    <Pagination 
+        currentPage={currentPage} 
+        totalPages={totalPages}
+        prevPageUrl={prevPageUrl}
+        nextPageUrl={nextPageUrl}
+    />
+</div>

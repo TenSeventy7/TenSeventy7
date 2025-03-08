@@ -2,7 +2,7 @@
 import Layout from '@site/layouts/Layout.astro';
 import Header from '@site/components/Header.astro';
 
-import {getAllPosts, getPost} from '@site/lib/blog-data';
+import {getAllPosts, getPost} from '@site/lib/blog/data';
 
 export async function getStaticPaths() {
   const data = await getAllPosts();

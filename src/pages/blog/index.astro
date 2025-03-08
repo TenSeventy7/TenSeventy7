@@ -1,0 +1,33 @@
+---
+import Layout from '@site/layouts/Layout.astro';
+import Header from '@site/components/Header.astro';
+import PostListing from '@site/components/blog/PostListing.astro';
+
+import { getPosts } from '@site/lib/blog/data';
+import { countTotalPages, getNavigationUrls } from '@site/lib/blog/utils';
+
+// Get the posts for the first page
+const data = await getPosts(null);
+const pageInfo = data.publication.posts.pageInfo;
+const posts = data.publication.posts.edges;
+
+// Get total pages
+const totalPages = await countTotalPages();
+const currentPage = 1;
+
+// Get navigation URLs
+const { prevPageUrl, nextPageUrl } = getNavigationUrls(currentPage, pageInfo.hasNextPage);
+---
+
+<Layout title="blog">
+    <Header />
+    <section class="py-8 px-8 lg:px-16 xl:px-32 w-full">
+        <PostListing 
+            posts={posts}
+            currentPage={currentPage}
+            totalPages={totalPages}
+            prevPageUrl={prevPageUrl}
+            nextPageUrl={nextPageUrl}
+        />
+    </section>
+</Layout>

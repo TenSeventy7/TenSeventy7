@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { getClient } from "./graphQLClient";
+import { getClient } from "@site/lib/graphQLClient";
 
 const blogDataApi = "blog.tenseventyseven.xyz";
 const postsPerPage = 6;
