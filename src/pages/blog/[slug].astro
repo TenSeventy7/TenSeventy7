@@ -1,4 +1,5 @@
 ---
+import '@site/styles/blog-content.css';
 import Layout from '@site/layouts/Layout.astro';
 import Header from '@site/components/Header.astro';
 
@@ -17,22 +18,19 @@ const post = await getPost(slug);
 
 <Layout title={`${post.title} | blog`}>
 	<Header />
-
-    <article class="p-3 mt-3 flex flex-col">
-        <img 
-            class="rounded-lg" 
-            src={post.coverImage?.url} 
-            alt={post.title} />
-        <h1 class="text-4xl font-bold pt-5">{post?.title}</h1>
-        <h2 class="text-xl pt-3 pb-3">{post.subtitle}</h2>
-    
-        <!--
-        <div class="flex flex-wrap justify-center items-center mt-5 mb-5">
-          {post?.tags.map((tag: any) => <Tag tag={tag} />)}
-        </div> -->
-    
-        <div class="post-details">
-          <p set:html={post?.content?.html} />
+  <section class="flex flex-col gap-8 py-8 px-8 lg:px-16 xl:px-32 w-full">
+    <div class="flex flex-col gap-2">
+      <span class="text-[2.25rem] font-header text-on-surface font-bold pt-5">{post?.title}</span>
+      <span class="font-medium text-outline">{post.subtitle}</span>
+    </div>
+    <img 
+        class="rounded-2xl h-96 w-full object-cover" 
+        src={post.coverImage?.url} 
+        alt={post.title} />
+    <article class="px-2 md:px-4 lg:px-12 xl:px-24">
+        <div class="flex flex-col gap-4">
+          <p class="w-full" set:html={post?.content?.html} />
         </div>
     </article>
+  </section>
 </Layout>
