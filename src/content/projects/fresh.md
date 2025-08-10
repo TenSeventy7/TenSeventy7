@@ -1,8 +1,8 @@
 ---
 title: "The Fresh Project"
-position: "Consultant"
+position: "Infrastructure/App Developer"
 description: "A short description of the first project"
-link: "https://fresh.tenseventyseven.xyz/"
+link: "https://freshroms.github.io/"
 image: "@site/assets/images/projects/fresh.png"
 tags: ["React", "TypeScript"]
 featured: true
